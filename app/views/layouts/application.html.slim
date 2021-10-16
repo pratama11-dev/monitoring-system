@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Monitoring System
+    meta content="width=device-width,initial-scale=1" name="viewport" /
+
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+    link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" /
+    link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/style.bundle.css" rel="stylesheet" type="text/css" /
+    link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/themes/layout/header/base/dark.css" rel="stylesheet" type="text/css" /
+    link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css" /
+    link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" /
+    link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" /
+  body
+    = yield

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard &#8211; WellcodeDev</title>
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="WellcodeDev &raquo; Feed" href="https://d2o4fp3t3d76bt.cloudfront.net/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="WellcodeDev &raquo; Comments Feed" href="https://d2o4fp3t3d76bt.cloudfront.net/comments/feed/" />
+    <script>
+      window._wpemojiSettings = {
+          "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/",
+          "ext": ".png",
+          "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/",
+          "svgExt": ".svg",
+          "source": {
+              "concatemoji": "https:\/\/wp-dev4.wellcode.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.5"
+          }
+      };
+      ! function(e, a, t) {
+          var n, r, o, i = a.createElement("canvas"),
+              p = i.getContext && i.getContext("2d");
+      
+          function s(e, t) {
+              var a = String.fromCharCode;
+              p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0);
+              e = i.toDataURL();
+              return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+          }
+      
+          function c(e) {
+              var t = a.createElement("script");
+              t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+          }
+          for (o = Array("flag", "emoji"), t.supports = {
+                  everything: !0,
+                  everythingExceptFlag: !0
+              }, r = 0; r < o.length; r++) t.supports[o[r]] = function(e) {
+              if (!p || !p.fillText) return !1;
+              switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+                  case "flag":
+                      return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]);
+                  case "emoji":
+                      return !s([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212])
+              }
+              return !1
+          }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+          t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+              t.DOMReady = !0
+          }, t.supports.everything || (n = function() {
+              t.readyCallback()
+          }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+              "complete" === a.readyState && t.readyCallback()
+          })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji)))
+      }(window, document, window._wpemojiSettings);
+    </script>
+    <style>
+      img.wp-smiley,
+      img.emoji {
+      display: inline !important;
+      border: none !important;
+      box-shadow: none !important;
+      height: 1em !important;
+      width: 1em !important;
+      margin: 0 .07em !important;
+      vertical-align: -0.1em !important;
+      background: none !important;
+      padding: 0 !important;
+      }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/css/dist/block-library/style.min.css?ver=5.5.5' media='all' />
+    <link rel='stylesheet' id='wc-block-vendors-style-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style.css?ver=3.1.0' media='all' />
+    <link rel='stylesheet' id='wc-block-style-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=3.1.0' media='all' />
+    <link rel='stylesheet' id='black-widgets-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/black-widgets/includes/front/css/black-widgets-public.css?ver=1.2.0' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2' media='all' />
+    <link rel='stylesheet' id='graphina-charts-for-elementor-public-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/graphina-elementor-charts-and-graphs/elementor/css/graphina-charts-for-elementor-public.css?ver=1.5.6' media='all' />
+    <link rel='stylesheet' id='graphina-charts-pro-requirement-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/graphina-elementor-charts-and-graphs/elementor/css/graphina-charts-for-elementor-pro.css?ver=1.5.6' media='all' />
+    <link rel='stylesheet' id='woocommerce-layout-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=4.4.2' media='all' />
+    <link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=4.4.2' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' id='woocommerce-general-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=4.4.2' media='all' />
+    <style id='woocommerce-inline-inline-css'>
+      .woocommerce form .form-row .required {
+      visibility: visible;
+      }
+    </style>
+    <link rel='stylesheet' id='metform-ui-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/metform/public/assets/css/metform-ui.css?ver=1.3.16' media='all' />
+    <link rel='stylesheet' id='metform-style-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/metform/public/assets/css/style.css?ver=1.3.16' media='all' />
+    <link rel='stylesheet' id='themerain-style-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/css/main.css?ver=5.5.5' media='all' />
+    <link rel='stylesheet' id='elementor-icons-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.12.0' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-legacy-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.4.5' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.4.5' media='all' />
+    <style id='elementor-frontend-inline-css'>
+      @font-face {
+      font-family: eicons;
+      src: url(https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);
+      src: url(https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
+      font-weight: 400;
+      font-style: normal
+      }
+    </style>
+
+    <link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/themes/layout/header/base/dark.css" rel="stylesheet" type="text/css" />
+    <link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css" />
+    <link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
+    <link href="https://metronic-assets.s3-ap-southeast-1.amazonaws.com/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+
+    <link rel='stylesheet' id='elementor-post-740-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/uploads/elementor/css/post-740.css?ver=1634280002' media='all' />
+    <link rel='stylesheet' id='elementor-pro-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.4.2' media='all' />
+    <link rel='stylesheet' id='metform-css-formpicker-control-editor-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/metform/controls/assets/css/form-picker-editor.css?ver=1.0.0' media='all' />
+    <link rel='stylesheet' id='elementor-post-3169-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/uploads/elementor/css/post-3169.css?ver=1634299699' media='all' />
+    <link rel='stylesheet' id='font-awesome-5-all-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.4.5' media='all' />
+    <link rel='stylesheet' id='font-awesome-4-shim-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.4.5' media='all' />
+    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMulish%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRubik%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.5.5'
+      media='all' />
+    <link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all' />
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/graphina-elementor-charts-and-graphs/elementor/js/apexcharts.min.js?ver=1.5.6' id='apexcharts-min-js'></script>
+    <script id='graphina-charts-for-elementor-public-js-extra'>
+      var graphina_localize = {
+          "ajaxurl": "https:\/\/wp-dev4.wellcode.io\/wp-admin\/admin-ajax.php",
+          "nonce": "99bdbdcff0",
+          "graphinaAllGraphs": [],
+          "graphinaAllGraphsOptions": [],
+          "graphinaBlockCharts": []
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/graphina-elementor-charts-and-graphs/elementor/js/graphina-charts-for-elementor-public.js?ver=1.5.6' id='graphina-charts-for-elementor-public-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.4.5' id='font-awesome-4-shim-js'></script>
+    <link rel="https://api.w.org/" href="https://d2o4fp3t3d76bt.cloudfront.net/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://d2o4fp3t3d76bt.cloudfront.net/wp-json/wp/v2/pages/3169" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://d2o4fp3t3d76bt.cloudfront.net/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.5.5" />
+    <meta name="generator" content="WooCommerce 4.4.2" />
+    <link rel="canonical" href="https://d2o4fp3t3d76bt.cloudfront.net/dashboard/" />
+    <link rel='shortlink' href='https://d2o4fp3t3d76bt.cloudfront.net/?p=3169' />
+    <link rel="alternate" type="application/json+oembed" href="https://d2o4fp3t3d76bt.cloudfront.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwp-dev4.wellcode.io%2Fdashboard%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://d2o4fp3t3d76bt.cloudfront.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwp-dev4.wellcode.io%2Fdashboard%2F&#038;format=xml" />
+    <noscript>
+      <style>.woocommerce-product-gallery{ opacity: 1 !important; }</style>
+    </noscript>
+    <link rel="icon" href="https://d2o4fp3t3d76bt.cloudfront.net/wp-content/uploads/2021/09/cropped-WG-FAVICON-2-1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://d2o4fp3t3d76bt.cloudfront.net/wp-content/uploads/2021/09/cropped-WG-FAVICON-2-1-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://d2o4fp3t3d76bt.cloudfront.net/wp-content/uploads/2021/09/cropped-WG-FAVICON-2-1-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://d2o4fp3t3d76bt.cloudfront.net/wp-content/uploads/2021/09/cropped-WG-FAVICON-2-1-270x270.png" />
+    <style id="wp-custom-css">
+      /** Start Template Kit CSS: Tattoo Studio (css/customizer.css) **/
+      /* Envato Elements Template Kit CSS */
+      /* Full Height Map Iframe */
+      .envato-kit-52-map-fit iframe {
+      height: 100vh;
+      }
+      /* 3 columns slider */
+      @media (min-width: 1024px) {
+      .envato-kit-52-slider-3-col {
+      overflow: hidden;
+      }
+      .envato-kit-52-slider-3-col .slick-list {
+      overflow: visible;
+      }
+      .envato-kit-52-slider-3-col .slick-slide {
+      margin-left: 25px;
+      margin-right: 25px;
+      }
+      }
+      /** End Template Kit CSS: Tattoo Studio (css/customizer.css) **/
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body class="page-template page-template-elementor_canvas page page-id-3169 wp-embed-responsive theme-scena woocommerce-no-js swup-enabled scheme-dark no-title elementor-default elementor-template-canvas elementor-kit-740 elementor-page elementor-page-3169">
+    <div data-elementor-type="wp-page" data-elementor-id="3169" class="elementor elementor-3169" data-elementor-settings="[]">
+      <%= yield %>
+    </div>
+    <script type="text/javascript">
+      var c = document.body.className;
+      c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+      document.body.className = c;
+    </script>
+    <link rel='stylesheet' id='e-animations-css' href='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.4.5' media='all' />
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/black-widgets/includes/front/js/bw-jquery-plugins.js?ver=1.0.0' id='bw-jquery-plugins-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/black-widgets/includes/front/js/bw-public.js?ver=1.0.0' id='bw-public-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js'></script>
+    <script id='wp-polyfill-js-after'>
+      ('fetch' in window) || document.write('<script src="https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>');
+      (document.contains) || document.write('<script src="https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>');
+      (window.DOMRect) || document.write('<script src="https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>');
+      (window.URL && window.URL.prototype && window.URLSearchParams) || document.write('<script src="https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>');
+      (window.FormData && window.FormData.prototype.keys) || document.write('<script src="https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>');
+      (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>');
+    </script>
+    <script id='contact-form-7-js-extra'>
+      var wpcf7 = {
+          "api": {
+              "root": "https:\/\/wp-dev4.wellcode.io\/wp-json\/",
+              "namespace": "contact-form-7\/v1"
+          },
+          "cached": "1"
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4.2' id='contact-form-7-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70' id='jquery-blockui-js'></script>
+    <script id='wc-add-to-cart-js-extra'>
+      var wc_add_to_cart_params = {
+          "ajax_url": "\/wp-admin\/admin-ajax.php",
+          "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
+          "i18n_view_cart": "View cart",
+          "cart_url": "https:\/\/wp-dev4.wellcode.io",
+          "is_cart": "",
+          "cart_redirect_after_add": "no"
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4.4.2' id='wc-add-to-cart-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4' id='js-cookie-js'></script>
+    <script id='woocommerce-js-extra'>
+      var woocommerce_params = {
+          "ajax_url": "\/wp-admin\/admin-ajax.php",
+          "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=4.4.2' id='woocommerce-js'></script>
+    <script id='wc-cart-fragments-js-extra'>
+      var wc_cart_fragments_params = {
+          "ajax_url": "\/wp-admin\/admin-ajax.php",
+          "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
+          "cart_hash_key": "wc_cart_hash_e7f0391d5bc42feb1a5125422f328ba2",
+          "fragment_name": "wc_fragments_e7f0391d5bc42feb1a5125422f328ba2",
+          "request_timeout": "5000"
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=4.4.2' id='wc-cart-fragments-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/metform/public/assets/js/htm.js?ver=1.3.16' id='htm-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.15' id='lodash-js'></script>
+    <script id='lodash-js-after'>
+      window.lodash = _.noConflict();
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/react.min.js?ver=16.9.0' id='react-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/vendor/react-dom.min.js?ver=16.9.0' id='react-dom-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/escape-html.min.js?ver=318abfb97a58ba13225ff74699ad73d4' id='wp-escape-html-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/dist/element.min.js?ver=5a551e3853304268ef7df075f80a3e15' id='wp-element-js'></script>
+    <script id='metform-app-js-extra'>
+      var mf = {
+          "postType": "page",
+          "restURI": "https:\/\/wp-dev4.wellcode.io\/wp-json\/metform\/v1\/forms\/views\/"
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/metform/public/assets/js/app.js?ver=1.3.16' id='metform-app-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/comment-reply.min.js?ver=5.5.5' id='comment-reply-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/gsap.min.js' id='gsap-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/scrolltrigger.min.js' id='scroll-trigger-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/lazysizes.min.js' id='lazysizes-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/ls.unveilhooks.min.js' id='ls-unveilhooks-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/swup.min.js' id='swup-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/SwupBodyClassPlugin.min.js' id='swup-body-class-plugin-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/SwupHeadPlugin.min.js' id='swup-head-plugin-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/SwupScrollPlugin.min.js' id='swup-scroll-plugin-js'></script>
+    <script id='themerain-functions-js-extra'>
+      var themerain = {
+          "ajaxurl": "https:\/\/wp-dev4.wellcode.io\/wp-admin\/admin-ajax.php"
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/themes/scena/assets/js/functions.js' id='themerain-functions-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/wp-embed.min.js?ver=5.5.5' id='wp-embed-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.4.2' id='elementor-pro-webpack-runtime-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.4.5' id='elementor-webpack-runtime-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.4.5' id='elementor-frontend-modules-js'></script>
+    <script id='elementor-pro-frontend-js-before'>
+      var ElementorProFrontendConfig = {
+          "ajaxurl": "https:\/\/wp-dev4.wellcode.io\/wp-admin\/admin-ajax.php",
+          "nonce": "f6b260900a",
+          "urls": {
+              "assets": "https:\/\/wp-dev4.wellcode.io\/wp-content\/plugins\/elementor-pro\/assets\/",
+              "rest": "https:\/\/wp-dev4.wellcode.io\/wp-json\/"
+          },
+          "i18n": {
+              "toc_no_headings_found": "No headings were found on this page."
+          },
+          "shareButtonsNetworks": {
+              "facebook": {
+                  "title": "Facebook",
+                  "has_counter": true
+              },
+              "twitter": {
+                  "title": "Twitter"
+              },
+              "google": {
+                  "title": "Google+",
+                  "has_counter": true
+              },
+              "linkedin": {
+                  "title": "LinkedIn",
+                  "has_counter": true
+              },
+              "pinterest": {
+                  "title": "Pinterest",
+                  "has_counter": true
+              },
+              "reddit": {
+                  "title": "Reddit",
+                  "has_counter": true
+              },
+              "vk": {
+                  "title": "VK",
+                  "has_counter": true
+              },
+              "odnoklassniki": {
+                  "title": "OK",
+                  "has_counter": true
+              },
+              "tumblr": {
+                  "title": "Tumblr"
+              },
+              "digg": {
+                  "title": "Digg"
+              },
+              "skype": {
+                  "title": "Skype"
+              },
+              "stumbleupon": {
+                  "title": "StumbleUpon",
+                  "has_counter": true
+              },
+              "mix": {
+                  "title": "Mix"
+              },
+              "telegram": {
+                  "title": "Telegram"
+              },
+              "pocket": {
+                  "title": "Pocket",
+                  "has_counter": true
+              },
+              "xing": {
+                  "title": "XING",
+                  "has_counter": true
+              },
+              "whatsapp": {
+                  "title": "WhatsApp"
+              },
+              "email": {
+                  "title": "Email"
+              },
+              "print": {
+                  "title": "Print"
+              }
+          },
+          "menu_cart": {
+              "cart_page_url": "https:\/\/wp-dev4.wellcode.io",
+              "checkout_page_url": "https:\/\/wp-dev4.wellcode.io"
+          },
+          "facebook_sdk": {
+              "lang": "en_US",
+              "app_id": ""
+          },
+          "lottie": {
+              "defaultAnimationUrl": "https:\/\/wp-dev4.wellcode.io\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"
+          }
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.4.2' id='elementor-pro-frontend-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4' id='jquery-ui-position-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.4.5' id='share-link-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1' id='elementor-dialog-js'></script>
+    <script id='elementor-frontend-js-before'>
+      var elementorFrontendConfig = {
+          "environmentMode": {
+              "edit": false,
+              "wpPreview": false,
+              "isScriptDebug": false
+          },
+          "i18n": {
+              "shareOnFacebook": "Share on Facebook",
+              "shareOnTwitter": "Share on Twitter",
+              "pinIt": "Pin it",
+              "download": "Download",
+              "downloadImage": "Download image",
+              "fullscreen": "Fullscreen",
+              "zoom": "Zoom",
+              "share": "Share",
+              "playVideo": "Play Video",
+              "previous": "Previous",
+              "next": "Next",
+              "close": "Close"
+          },
+          "is_rtl": false,
+          "breakpoints": {
+              "xs": 0,
+              "sm": 480,
+              "md": 768,
+              "lg": 1025,
+              "xl": 1440,
+              "xxl": 1600
+          },
+          "responsive": {
+              "breakpoints": {
+                  "mobile": {
+                      "label": "Mobile",
+                      "value": 767,
+                      "default_value": 767,
+                      "direction": "max",
+                      "is_enabled": true
+                  },
+                  "mobile_extra": {
+                      "label": "Mobile Extra",
+                      "value": 880,
+                      "default_value": 880,
+                      "direction": "max",
+                      "is_enabled": false
+                  },
+                  "tablet": {
+                      "label": "Tablet",
+                      "value": 1024,
+                      "default_value": 1024,
+                      "direction": "max",
+                      "is_enabled": true
+                  },
+                  "tablet_extra": {
+                      "label": "Tablet Extra",
+                      "value": 1200,
+                      "default_value": 1200,
+                      "direction": "max",
+                      "is_enabled": false
+                  },
+                  "laptop": {
+                      "label": "Laptop",
+                      "value": 1366,
+                      "default_value": 1366,
+                      "direction": "max",
+                      "is_enabled": false
+                  },
+                  "widescreen": {
+                      "label": "Widescreen",
+                      "value": 2400,
+                      "default_value": 2400,
+                      "direction": "min",
+                      "is_enabled": false
+                  }
+              }
+          },
+          "version": "3.4.5",
+          "is_static": false,
+          "experimentalFeatures": {
+              "e_import_export": true,
+              "landing-pages": true,
+              "elements-color-picker": true,
+              "admin-top-bar": true,
+              "form-submissions": true
+          },
+          "urls": {
+              "assets": "https:\/\/wp-dev4.wellcode.io\/wp-content\/plugins\/elementor\/assets\/"
+          },
+          "settings": {
+              "page": [],
+              "editorPreferences": []
+          },
+          "kit": {
+              "global_image_lightbox": "yes",
+              "active_breakpoints": ["viewport_mobile", "viewport_tablet"],
+              "lightbox_enable_counter": "yes",
+              "lightbox_enable_fullscreen": "yes",
+              "lightbox_enable_zoom": "yes",
+              "lightbox_enable_share": "yes",
+              "lightbox_title_src": "title",
+              "lightbox_description_src": "description"
+          },
+          "post": {
+              "id": 3169,
+              "title": "dashboard%20%E2%80%93%20WellcodeDev",
+              "excerpt": "",
+              "featuredImage": false
+          }
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.4.5' id='elementor-frontend-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.4.2' id='pro-preloaded-elements-handlers-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.4.5' id='preloaded-modules-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.4.2' id='e-sticky-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/underscore.min.js?ver=1.8.3' id='underscore-js'></script>
+    <script id='wp-util-js-extra'>
+      var _wpUtilSettings = {
+          "ajax": {
+              "url": "\/wp-admin\/admin-ajax.php"
+          }
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-includes/js/wp-util.min.js?ver=5.5.5' id='wp-util-js'></script>
+    <script id='wpforms-elementor-js-extra'>
+      var wpformsElementorVars = {
+          "recaptcha_type": "v2"
+      };
+    </script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.6.2.2' id='wpforms-elementor-js'></script>
+    <script src='https://d2o4fp3t3d76bt.cloudfront.net/wp-content/plugins/metform/controls/assets/js/form-picker-editor.js?ver=1.3.16' id='metform-js-formpicker-control-editor-js'></script>
+  </body>
+</html>
