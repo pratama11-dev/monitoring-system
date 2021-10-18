@@ -1,5 +1,14 @@
-<div id="modalAddJob" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-focus-on="input:first">
-  <%= render partial: "modal_add_job"%>
+<div
+  id="modalDetailsPieChart"\
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  data-focus-on="input:first"
+  data-controller="modal"
+>
+  <%= render partial: "modal_details_pie_chart"%>
 </div>
 
 <div class="elementor-inner">
@@ -455,9 +464,9 @@
                 </div>
                 <div class="elementor-element elementor-element-b7f5c2f elementor-widget elementor-widget-text-editor" data-id="b7f5c2f" data-element_type="widget" data-widget_type="text-editor.default">
                   <div class="elementor-widget-container">
-                    <div class="elementor-text-editor elementor-clearfix">
+                    <%# <div class="elementor-text-editor elementor-clearfix">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua 
-                    </div>
+                    </div> %>
                   </div>
                 </div>
               </div>
@@ -588,19 +597,6 @@
                                           color: '#CAE1F8',
                                           fontSize: '13px',
                                       },
-                                      total: {
-                                          fontFamily: 'Roboto',
-                                          fontWeight: '400',
-                                          color: '#506CA7',
-                                          fontSize: '13px',
-                                          show: true,
-                                          label: 'Total',
-                                          formatter: function(w) {
-                                              return '90' + w.globals.seriesTotals.reduce((a, b) => {
-                                                  return a + b
-                                              }, 0) + '521';
-                                          }
-                                      }
                                   },
                                   track: {
                                       show: true,
@@ -684,7 +680,14 @@
                 <div class="elementor-element elementor-element-bfaf6db elementor-align-center elementor-widget elementor-widget-button" data-id="bfaf6db" data-element_type="widget" data-widget_type="button.default">
                   <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        <%# data-toggle="modal" %>
+                        data-modal-trigger-target-selector="#modalDetailsPieChart"
+                        data-controller="modal-trigger"
+                        data-action="click->modal-trigger#handleClick"
+                      >
                           Launch demo modal
                       </button>
                     </div>
@@ -702,7 +705,7 @@
                       <li class="elementor-icon-list-item">
                         <span class="elementor-icon-list-icon">
                         <i aria-hidden="true" class="far fa-chart-bar"></i>						</span>
-                        <span class="elementor-icon-list-text text-white">Progress Fabrigation</span>
+                        <span class="elementor-icon-list-text text-white">Progress Fabrication</span>
                       </li>
                     </ul>
                   </div>
@@ -791,19 +794,6 @@
                                           color: '#CAE1F8',
                                           fontSize: '13px',
                                       },
-                                      total: {
-                                          fontFamily: 'Roboto',
-                                          fontWeight: '400',
-                                          color: '#506CA7',
-                                          fontSize: '13px',
-                                          show: true,
-                                          label: 'Total',
-                                          formatter: function(w) {
-                                              return '90' + w.globals.seriesTotals.reduce((a, b) => {
-                                                  return a + b
-                                              }, 0) + '521';
-                                          }
-                                      }
                                   },
                                   track: {
                                       show: true,
@@ -996,19 +986,6 @@
                                           color: '#CAE1F8',
                                           fontSize: '13px',
                                       },
-                                      total: {
-                                          fontFamily: 'Roboto',
-                                          fontWeight: '400',
-                                          color: '#506CA7',
-                                          fontSize: '13px',
-                                          show: true,
-                                          label: 'Total',
-                                          formatter: function(w) {
-                                              return '90' + w.globals.seriesTotals.reduce((a, b) => {
-                                                  return a + b
-                                              }, 0) + '521';
-                                          }
-                                      }
                                   },
                                   track: {
                                       show: true,
@@ -1201,19 +1178,7 @@
                                           color: '#CAE1F8',
                                           fontSize: '13px',
                                       },
-                                      total: {
-                                          fontFamily: 'Roboto',
-                                          fontWeight: '400',
-                                          color: '#506CA7',
-                                          fontSize: '13px',
-                                          show: true,
-                                          label: 'Total',
-                                          formatter: function(w) {
-                                              return '90' + w.globals.seriesTotals.reduce((a, b) => {
-                                                  return a + b
-                                              }, 0) + '521';
-                                          }
-                                      }
+                                      
                                   },
                                   track: {
                                       show: true,
@@ -1375,12 +1340,12 @@
                       
                       var columnOptions = {
                           series: [{
-                              "name": "Element 1",
+                              "name": "Realisasi",
                               "data": [105, 143, 122, 138, 147, 111, 127, 179],
                               "color": "#3499FF"
                           }, {
-                              "name": "Element 2",
-                              "data": [187, 174, 158, 111, 129, 158, 111, 129],
+                              "name": "Total lender",
+                              "data": [200, 200, 200, 200, 200, 200, 200, 200],
                               "color": "#e53efc"
                           }],
                           chart: {
@@ -1611,9 +1576,9 @@
                 </div>
                 <div class="elementor-element elementor-element-7505b3f elementor-widget elementor-widget-text-editor" data-id="7505b3f" data-element_type="widget" data-widget_type="text-editor.default">
                   <div class="elementor-widget-container">
-                    <div class="elementor-text-editor elementor-clearfix">
+                    <%# <div class="elementor-text-editor elementor-clearfix">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua 
-                    </div>
+                    </div> %>
                   </div>
                 </div>
               </div>
@@ -1660,11 +1625,11 @@
                       
                       var columnOptions = {
                           series: [{
-                              "name": "Element 1",
-                              "data": [105, 143, 122, 138, 147, 111, 127, 179],
+                              "name": "Realisasi",
+                              "data": [190, 180, 122, 138, 147, 160, 127, 179],
                               "color": "#3499FF"
                           }, {
-                              "name": "Element 2",
+                              "name": "Total Lender",
                               "data": [187, 174, 158, 111, 129, 158, 111, 129],
                               "color": "#e53efc"
                           }],
@@ -1896,9 +1861,9 @@
                 </div>
                 <div class="elementor-element elementor-element-7505b3f elementor-widget elementor-widget-text-editor" data-id="7505b3f" data-element_type="widget" data-widget_type="text-editor.default">
                   <div class="elementor-widget-container">
-                    <div class="elementor-text-editor elementor-clearfix">
+                    <%# <div class="elementor-text-editor elementor-clearfix">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua 
-                    </div>
+                    </div> %>
                   </div>
                 </div>
               </div>
@@ -1907,959 +1872,7 @@
         </div>
       </div>
     </section>
-    <section class="elementor-section elementor-top-section elementor-element elementor-element-1da6d74 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1da6d74" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-      <div class="elementor-background-overlay"></div>
-      <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-row">
-          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3c462fa" data-id="3c462fa" data-element_type="column">
-            <div class="elementor-column-wrap elementor-element-populated">
-              <div class="elementor-widget-wrap">
-                <div class="elementor-element elementor-element-3cf11e3 elementor-invisible elementor-widget elementor-widget-heading" data-id="3cf11e3" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:2000}"
-                  data-widget_type="heading.default">
-                  <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Dashboard Analisis</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="elementor-section elementor-top-section elementor-element elementor-element-c2d0fb2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c2d0fb2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-      <div class="elementor-background-overlay"></div>
-      <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-row">
-          <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1f4385d animated-slow elementor-invisible" data-id="1f4385d" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:500}">
-            <div class="elementor-column-wrap elementor-element-populated">
-              <div class="elementor-widget-wrap">
-                <div class="elementor-element elementor-element-0c8e5fa elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0c8e5fa" data-element_type="widget" data-widget_type="icon-list.default">
-                  <div class="elementor-widget-container">
-                    <ul class="elementor-icon-list-items">
-                      <li class="elementor-icon-list-item">
-                        <span class="elementor-icon-list-icon">
-                        <i aria-hidden="true" class="far fa-chart-bar"></i>						</span>
-                        <span class="elementor-icon-list-text text-white">Design Progress</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-5947329 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="5947329" data-element_type="widget" data-widget_type="divider.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-37e52b8 elementor-widget elementor-widget-column_chart" data-id="37e52b8" data-element_type="widget" data-widget_type="column_chart.default">
-                  <div class="elementor-widget-container">
-                    <div class="">
-                      <div class="">
-                      </div>
-                      <div class="">
-                        <div class="chart-texture column-chart-37e52b8"></div>
-                      </div>
-                    </div>
-                    <script>
-                      var myElement = document.querySelector(".column-chart-37e52b8");
-                      
-                      if (typeof isInit === 'undefined') {
-                          var isInit = {};
-                      }
-                      isInit['37e52b8'] = false;
-                      
-                      var columnOptions = {
-                          series: [{
-                              "name": "Element 1",
-                              "data": [105, 143, 122, 138, 147, 111, 127, 179],
-                              "color": "#3499FF"
-                          }, {
-                              "name": "Element 2",
-                              "data": [187, 174, 158, 111, 129, 158, 111, 129],
-                              "color": "#e53efc"
-                          }],
-                          chart: {
-                              height: parseInt('350'),
-                              type: 'bar',
-                              stacked: 'yes',
-                              stackType: 'normal',
-                              animations: {
-                                  enabled: '1',
-                                  speed: '5000',
-                                  //delay: '//'
-                              },
-                              toolbar: {
-                                  show: 'yes',
-                                  export: {
-                                      csv: {
-                                          filename: "37e52b8"
-                                      },
-                                      svg: {
-                                          filename: "37e52b8"
-                                      },
-                                      png: {
-                                          filename: "37e52b8"
-                                      }
-                                  }
-                              },
-                              dropShadow: {
-                                  enabled: '',
-                                  enabledOnSeries: [],
-                                  top: parseInt(''),
-                                  left: parseInt(''),
-                                  blur: parseInt(''),
-                                  color: '',
-                                  opacity: parseFloat('')
-                              }
-                          },
-                          plotOptions: {
-                              bar: {
-                                  horizontal: '',
-                                  columnWidth: '30% ',
-                                  startingShape: 'flat',
-                                  endingShape: 'flat',
-                                  dataLabels: {
-                                      position: '',
-                                  }
-                              },
-                          },
-                          noData: {
-                              text: 'No Data Available',
-                              align: 'center',
-                              verticalAlign: 'middle',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Roboto',
-                                  color: '#54749F'
-                              }
-                          },
-                          dataLabels: {
-                              enabled: '',
-                              offsetY: parseFloat('0'),
-                              offsetX: parseFloat('0'),
-                              style: {
-                                  colors: ['']
-                              },
-                              background: {
-                                  enabled: '',
-                                  foreColor: [''],
-                                  borderWidth: parseInt(''),
-                                  borderColor: ''
-                              }
-                          },
-                          stroke: {
-                              show: true,
-                              width: 2,
-                              colors: ['transparent']
-                          },
-                          grid: {
-                              yaxis: {
-                                  lines: {
-                                      show: 'yes'
-                                  }
-                              }
-                          },
-                          xaxis: {
-                              categories: 'Jan_,_Feb_,_Mar_,_Apr_,_May_,_Jun_,_July_,_Aug'.split('_,_'),
-                              position: 'bottom',
-                              tickAmount: parseInt("30"),
-                              tickPlacement: "on",
-                              labels: {
-                                  show: 'yes',
-                                  rotateAlways: '',
-                                  rotate: '',
-                                  offsetX: parseInt('0'),
-                                  offsetY: parseInt('0'),
-                                  trim: true,
-                                  style: {
-                                      colors: '#54749F',
-                                      fontSize: '12px',
-                                      fontFamily: 'Roboto',
-                                      fontWeight: '500'
-                                  },
-                                  formatter: function(val) {
-                                      return '' + val + '';
-                                  }
-                              },
-                              tooltip: {
-                                  enabled: ""
-                              },
-                              crosshairs: {
-                                  show: ""
-                              }
-                          },
-                          yaxis: {
-                              opposite: '',
-                              decimalsInFloat: parseInt("2"),
-                              labels: {
-                                  show: 'yes',
-                                  rotate: '0',
-                                  offsetX: parseInt('0'),
-                                  offsetY: parseInt('0'),
-                                  style: {
-                                      colors: '#54749F',
-                                      fontSize: '12px',
-                                      fontFamily: 'Roboto',
-                                      fontWeight: '500'
-                                  }
-                              },
-                              tooltip: {
-                                  enabled: ""
-                              },
-                              crosshairs: {
-                                  show: ""
-                              }
-                          },
-                          colors: '#3499FF_,_#e53efc'.split('_,_'),
-                          fill: {
-                              type: 'classic',
-                              opacity: parseFloat('1'),
-                              colors: '#3499FF_,_#e53efc'.split('_,_'),
-                              gradient: {
-                                  gradientToColors: '#3499FF_,_#e53efc'.split('_,_'),
-                                  type: '',
-                                  inverseColors: '',
-                                  opacityFrom: parseFloat(''),
-                                  opacityTo: parseFloat('')
-                              },
-                              pattern: {
-                                  style: '_,_'.split('_,_'),
-                                  width: 6,
-                                  height: 6,
-                                  strokeWidth: 2
-                              }
-                          },
-                          legend: {
-                              showForSingleSeries: true,
-                              show: 'yes',
-                              position: 'bottom',
-                              horizontalAlign: 'center',
-                              fontSize: '12px',
-                              fontFamily: 'Roboto',
-                              fontWeight: '500',
-                              labels: {
-                                  colors: '#54749F'
-                              }
-                          },
-                          tooltip: {
-                              enabled: 'yes',
-                              theme: 'dark',
-                              shared: 'yes' === "yes",
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Roboto'
-                              }
-                          }
-                      };
-                      
-                      if ("" === "yes") {
-                          columnOptions.yaxis.labels.formatter = function(val) {
-                              return '' + val + '';
-                          }
-                      }
-                      if ("normal" !== '100%') {
-                          columnOptions.yaxis.tickAmount = parseInt("0");
-                          columnOptions.dataLabels.formatter = function(val) {
-                              return '' + val + '';
-                          };
-                      }
-                      if ("yes" === "yes") {
-                          columnOptions.tooltip['enabledOnSeries'] = [0, 1];
-                      }
-                      if ("" === "yes") {
-                          columnOptions['annotations'] = {
-                              yaxis: [{
-                                  y: 0,
-                                  strokeDashArray: parseInt("0"),
-                                  borderColor: '#000000'
-                              }]
-                          };
-                      }
-                      
-                      if (typeof initNowGraphina !== "undefined") {
-                          initNowGraphina(
-                              myElement, {
-                                  ele: document.querySelector(".column-chart-37e52b8"),
-                                  options: columnOptions,
-                                  series: [{
-                                      name: '',
-                                      data: []
-                                  }],
-                                  animation: true
-                              },
-                              '37e52b8'
-                          );
-                      }
-                      if (window.ajaxIntervalGraphina_37e52b8 !== undefined) {
-                          clearInterval(window.ajaxIntervalGraphina_37e52b8)
-                      }
-                    </script>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-2fb6b3f elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="2fb6b3f" data-element_type="widget" data-widget_type="divider.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-b7f5c2f elementor-widget elementor-widget-text-editor" data-id="b7f5c2f" data-element_type="widget" data-widget_type="text-editor.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-text-editor elementor-clearfix">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-eff3dfd animated-slow elementor-invisible" data-id="eff3dfd" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:500}">
-            <div class="elementor-column-wrap elementor-element-populated">
-              <div class="elementor-widget-wrap">
-                <div class="elementor-element elementor-element-9485337 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="9485337" data-element_type="widget" data-widget_type="icon-list.default">
-                  <div class="elementor-widget-container">
-                    <ul class="elementor-icon-list-items">
-                      <li class="elementor-icon-list-item">
-                        <span class="elementor-icon-list-icon">
-                        <i aria-hidden="true" class="far fa-chart-bar"></i>						</span>
-                        <span class="elementor-icon-list-text text-white">Design Progress</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-4b64fe6 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="4b64fe6" data-element_type="widget" data-widget_type="divider.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-c33cee3 elementor-widget elementor-widget-polar_chart" data-id="c33cee3" data-element_type="widget" data-widget_type="polar_chart.default">
-                  <div class="elementor-widget-container">
-                    <div class="">
-                      <div class="">
-                      </div>
-                      <div class="">
-                        <div class="chart-texture polar-chart-c33cee3"></div>
-                      </div>
-                    </div>
-                    <script>
-                      var myElement = document.querySelector(".polar-chart-c33cee3");
-                      if (typeof isInit === 'undefined') {
-                          var isInit = {};
-                      }
-                      isInit['c33cee3'] = false;
-                      
-                      var polarOptions = {
-                          series: [93, 28, 163, 114, 199],
-                          chart: {
-                              height: parseInt('350'),
-                              type: 'polarArea',
-                              toolbar: {
-                                  show: '',
-                                  export: {
-                                      csv: {
-                                          filename: "c33cee3"
-                                      },
-                                      svg: {
-                                          filename: "c33cee3"
-                                      },
-                                      png: {
-                                          filename: "c33cee3"
-                                      }
-                                  }
-                              },
-                              animations: {
-                                  enabled: '1',
-                                  speed: '800',
-                                  delay: '150',
-                                  dynamicAnimation: {
-                                      enabled: true
-                                  }
-                              },
-                          },
-                          labels: 'Jan_,_Feb_,_Mar_,_Apr_,_Jun'.split('_,_'),
-                          noData: {
-                              text: 'No Data Available',
-                              align: 'center',
-                              verticalAlign: 'middle',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Rubik',
-                                  color: '#54749F'
-                              }
-                          },
-                          dataLabels: {
-                              enabled: '',
-                              style: {
-                                  colors: ['#ffffff'],
-                              }
-                          },
-                          colors: '#3499FF_,_#e53efc_,_#f9a243_,_#46adfe_,_#2c80ff'.split('_,_'),
-                          fill: {
-                              type: 'classic',
-                              opacity: parseFloat('0.4'),
-                              colors: '#3499FF_,_#e53efc_,_#f9a243_,_#46adfe_,_#2c80ff'.split('_,_'),
-                              gradient: {
-                                  gradientToColors: '_,__,__,__,_'.split('_,_'),
-                                  inverseColors: '',
-                                  opacityFrom: parseFloat(''),
-                                  opacityTo: parseFloat('')
-                              },
-                              pattern: {
-                                  style: '_,__,__,__,_'.split('_,_'),
-                                  width: 6,
-                                  height: 6,
-                                  strokeWidth: 2
-                              }
-                          },
-                          legend: {
-                              showForSingleSeries: true,
-                              show: '1',
-                              position: 'bottom',
-                              horizontalAlign: 'center',
-                              fontSize: '12px',
-                              fontFamily: 'Rubik',
-                              fontWeight: '',
-                              labels: {
-                                  colors: '#54749F'
-                              }
-                          },
-                          tooltip: {
-                              enabled: '1',
-                              theme: 'light',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Rubik'
-                              }
-                          }
-                      };
-                      
-                      if (typeof initNowGraphina !== "undefined") {
-                          initNowGraphina(
-                              myElement, {
-                                  ele: document.querySelector(".polar-chart-c33cee3"),
-                                  options: polarOptions,
-                                  series: [{
-                                      name: '',
-                                      data: []
-                                  }],
-                                  animation: true
-                              },
-                              'c33cee3'
-                          );
-                      }
-                      if (window.ajaxIntervalGraphina_c33cee3 !== undefined) {
-                          clearInterval(window.ajaxIntervalGraphina_c33cee3)
-                      }
-                    </script>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-2952bb4 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="2952bb4" data-element_type="widget" data-widget_type="divider.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-404b455 elementor-widget elementor-widget-text-editor" data-id="404b455" data-element_type="widget" data-widget_type="text-editor.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-text-editor elementor-clearfix">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="elementor-section elementor-top-section elementor-element elementor-element-986d38f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="986d38f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-      <div class="elementor-background-overlay"></div>
-      <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-row">
-          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2b9ee92" data-id="2b9ee92" data-element_type="column">
-            <div class="elementor-column-wrap elementor-element-populated">
-              <div class="elementor-widget-wrap">
-                <div class="elementor-element elementor-element-f449b68 elementor-widget elementor-widget-heading" data-id="f449b68" data-element_type="widget" data-widget_type="heading.default">
-                  <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Dashboard Analisis</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="elementor-section elementor-top-section elementor-element elementor-element-cc70fa7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cc70fa7" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-      <div class="elementor-background-overlay"></div>
-      <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-row">
-          <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-68e8964 animated-slow elementor-invisible" data-id="68e8964" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-            <div class="elementor-column-wrap elementor-element-populated">
-              <div class="elementor-widget-wrap">
-                <div class="elementor-element elementor-element-ed92b29 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="ed92b29" data-element_type="widget" data-widget_type="icon-list.default">
-                  <div class="elementor-widget-container">
-                    <ul class="elementor-icon-list-items">
-                      <li class="elementor-icon-list-item">
-                        <span class="elementor-icon-list-icon">
-                        <i aria-hidden="true" class="far fa-chart-bar"></i>						</span>
-                        <span class="elementor-icon-list-text text-white">Design Progress</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-06f1d50 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="06f1d50" data-element_type="widget" data-widget_type="divider.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-460a180 elementor-widget elementor-widget-donut_chart" data-id="460a180" data-element_type="widget" data-widget_type="donut_chart.default">
-                  <div class="elementor-widget-container">
-                    <div class="">
-                      <div class="">
-                      </div>
-                      <div class="">
-                        <div class="chart-texture donut-chart-460a180"></div>
-                      </div>
-                    </div>
-                    <script>
-                      var myElement = document.querySelector(".donut-chart-460a180");
-                      
-                      if (typeof isInit === 'undefined') {
-                          var isInit = {};
-                      }
-                      isInit['460a180'] = false;
-                      
-                      var donutOptions = {
-                          series: '63_,_73_,_81_,_83'.split('_,_').map((val) => parseFloat(val)),
-                          chart: {
-                              height: parseInt('350'),
-                              type: 'donut',
-                              toolbar: {
-                                  show: '',
-                                  export: {
-                                      csv: {
-                                          filename: "460a180"
-                                      },
-                                      svg: {
-                                          filename: "460a180"
-                                      },
-                                      png: {
-                                          filename: "460a180"
-                                      }
-                                  }
-                              },
-                              animations: {
-                                  enabled: '1',
-                                  speed: parseInt('800'),
-                                  //delay: '//',
-                                  dynamicAnimation: {
-                                      enabled: true
-                                  }
-                              },
-                          },
-                          plotOptions: {
-                              pie: {
-                                  donut: {
-                                      size: '65%'
-                                  }
-                              }
-                          },
-                          labels: 'Jan_,_Feb_,_Mar_,_Apr'.split('_,_'),
-                          noData: {
-                              text: 'No Data Available',
-                              align: 'center',
-                              verticalAlign: 'middle',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Proza Libre',
-                                  color: '#FDFDFD'
-                              }
-                          },
-                          dataLabels: {
-                              enabled: '',
-                              style: {
-                                  colors: ['#ffffff'],
-                              }
-                          },
-                          colors: '#3499FF_,_#e53efc_,_#f9a243_,_#46adfe'.split('_,_'),
-                          fill: {
-                              type: 'classic',
-                              opacity: 1,
-                              colors: '#3499FF_,_#e53efc_,_#f9a243_,_#46adfe'.split('_,_'),
-                              gradient: {
-                                  gradientToColors: '#6C25FB_,_#ff7179_,_#654ae8_,_#f8576f'.split('_,_'),
-                                  inverseColors: '',
-                                  opacityFrom: parseFloat(''),
-                                  opacityTo: parseFloat('')
-                              },
-                              pattern: {
-                                  style: 'verticalLines_,_squares_,_horizontalLines_,_slantedLines'.split('_,_'),
-                                  width: 6,
-                                  height: 6,
-                                  strokeWidth: 2
-                              }
-                          },
-                          legend: {
-                              showForSingleSeries: true,
-                              show: '1',
-                              position: 'top',
-                              horizontalAlign: 'center',
-                              fontSize: '12px',
-                              fontFamily: 'Proza Libre',
-                              fontWeight: '',
-                              labels: {
-                                  colors: '#FDFDFD'
-                              }
-                          },
-                          tooltip: {
-                              enabled: '1',
-                              theme: 'light',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Proza Libre'
-                              }
-                          },
-                          stroke: {
-                              show: '',
-                              width: parseInt('0')
-                          }
-                      };
-                      
-                      if (typeof initNowGraphina !== "undefined") {
-                          initNowGraphina(
-                              myElement, {
-                                  ele: document.querySelector(".donut-chart-460a180"),
-                                  options: donutOptions,
-                                  series: [{
-                                      name: '',
-                                      data: []
-                                  }],
-                                  animation: true
-                              },
-                              '460a180'
-                          );
-                      }
-                      if (window.ajaxIntervalGraphina_460a180 !== undefined) {
-                          clearInterval(window.ajaxIntervalGraphina_460a180)
-                      }
-                    </script>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-f2b689c elementor-widget elementor-widget-text-editor" data-id="f2b689c" data-element_type="widget" data-widget_type="text-editor.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-text-editor elementor-clearfix">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua 
-                    </div>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-175ef19 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="175ef19" data-element_type="widget" data-widget_type="divider.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f7547ae animated-slow elementor-invisible" data-id="f7547ae" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-            <div class="elementor-column-wrap elementor-element-populated">
-              <div class="elementor-widget-wrap">
-                <div class="elementor-element elementor-element-9cc1c1f elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="9cc1c1f" data-element_type="widget" data-widget_type="icon-list.default">
-                  <div class="elementor-widget-container">
-                    <ul class="elementor-icon-list-items">
-                      <li class="elementor-icon-list-item">
-                        <span class="elementor-icon-list-icon">
-                        <i aria-hidden="true" class="far fa-chart-bar"></i>						</span>
-                        <span class="elementor-icon-list-text text-white">Design Progress</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-6fb7480 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="6fb7480" data-element_type="widget" data-widget_type="divider.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-2aed04d elementor-widget elementor-widget-area_chart" data-id="2aed04d" data-element_type="widget" data-widget_type="area_chart.default">
-                  <div class="elementor-widget-container">
-                    <div class="">
-                      <div class="">
-                      </div>
-                      <div class="">
-                        <div class="chart-texture area-chart-2aed04d"></div>
-                      </div>
-                    </div>
-                    <script>
-                      var myElement = document.querySelector(".area-chart-2aed04d");
-                      
-                      if (typeof isInit === 'undefined') {
-                          var isInit = {};
-                      }
-                      isInit['2aed04d'] = false;
-                      
-                      var areaOptions = {
-                          series: [{
-                              "name": "Element 1",
-                              "data": [187, 138, 31, 80, 11, 52]
-                          }, {
-                              "name": "Element 2",
-                              "data": [90, 176, 15, 63, 12, 151]
-                          }, {
-                              "name": "Element 3",
-                              "data": [121, 69, 167, 113, 63, 33]
-                          }],
-                          chart: {
-                              height: parseInt('400'),
-                              type: 'area',
-                              toolbar: {
-                                  show: '1',
-                                  export: {
-                                      csv: {
-                                          filename: "2aed04d"
-                                      },
-                                      svg: {
-                                          filename: "2aed04d"
-                                      },
-                                      png: {
-                                          filename: "2aed04d"
-                                      }
-                                  }
-                              },
-                              dropShadow: {
-                                  enabled: '',
-                                  enabledOnSeries: [0, 1, 2],
-                                  top: parseInt(''),
-                                  left: parseInt(''),
-                                  blur: parseInt(''),
-                                  color: '',
-                                  opacity: parseFloat('')
-                              },
-                              animations: {
-                                  enabled: '1',
-                                  speed: parseInt('2000'),
-                                  delay: parseInt('150')
-                              }
-                          },
-                          noData: {
-                              text: 'No Data Available',
-                              align: 'center',
-                              verticalAlign: 'middle',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Rubik',
-                                  color: '#F9F9F9'
-                              }
-                          },
-                          dataLabels: {
-                              enabled: '',
-                              style: {
-                                  colors: ['']
-                              },
-                              background: {
-                                  enabled: '',
-                                  foreColor: [''],
-                                  borderWidth: parseInt(''),
-                                  borderColor: ''
-                              },
-                              formatter: function(val, opts) {
-                                  return '' + val + '';
-                              }
-                          },
-                          stroke: {
-                              curve: 'smooth',
-                          },
-                          grid: {
-                              yaxis: {
-                                  lines: {
-                                      show: '1'
-                                  }
-                              }
-                          },
-                          xaxis: {
-                              categories: 'Jan_,_Feb_,_Mar_,_Apr_,_May_,_Jun'.split('_,_'),
-                              position: 'bottom',
-                              tickAmount: parseInt("30"),
-                              tickPlacement: "on",
-                              labels: {
-                                  show: '1',
-                                  rotateAlways: '',
-                                  rotate: '',
-                                  offsetX: parseInt('0'),
-                                  offsetY: parseInt('0'),
-                                  trim: true,
-                                  style: {
-                                      colors: '#F9F9F9',
-                                      fontSize: '12px',
-                                      fontFamily: 'Rubik',
-                                      fontWeight: ''
-                                  },
-                                  formatter: function(val) {
-                                      return '' + val + '';
-                                  }
-                              },
-                              tooltip: {
-                                  enabled: ""
-                              },
-                              crosshairs: {
-                                  show: ""
-                              }
-                          },
-                          yaxis: {
-                              opposite: '',
-                              tickAmount: parseInt("0"),
-                              decimalsInFloat: parseInt("2"),
-                              labels: {
-                                  show: '1',
-                                  rotate: '0',
-                                  offsetX: parseInt('0'),
-                                  offsetY: parseInt('0'),
-                                  style: {
-                                      colors: '#F9F9F9',
-                                      fontSize: '12px',
-                                      fontFamily: 'Rubik',
-                                      fontWeight: ''
-                                  }
-                              },
-                              tooltip: {
-                                  enabled: ""
-                              },
-                              crosshairs: {
-                                  show: ""
-                              }
-                          },
-                          colors: '#3499FF_,_#e53efc_,_#f9a243'.split('_,_'),
-                          fill: {
-                              type: 'gradient',
-                              opacity: parseFloat(''),
-                              colors: '#3499FF_,_#e53efc_,_#f9a243'.split('_,_'),
-                              gradient: {
-                                  gradientToColors: '#6C25FB_,_#ff7179_,_#654ae8'.split('_,_'),
-                                  type: 'vertical',
-                                  inverseColors: '',
-                                  opacityFrom: parseFloat('0.6'),
-                                  opacityTo: parseFloat('0.6')
-                              },
-                              pattern: {
-                                  style: '_,__,_'.split('_,_'),
-                                  width: 6,
-                                  height: 6,
-                                  strokeWidth: 2
-                              }
-                          },
-                          legend: {
-                              showForSingleSeries: true,
-                              show: '1',
-                              position: 'bottom',
-                              horizontalAlign: 'center',
-                              fontSize: '12px',
-                              fontFamily: 'Rubik',
-                              fontWeight: '',
-                              labels: {
-                                  colors: '#F9F9F9'
-                              }
-                          },
-                          tooltip: {
-                              enabled: '1',
-                              shared: 'yes' === "yes",
-                              theme: 'light',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Rubik'
-                              }
-                          }
-                      };
-                      
-                      if ("" === "yes") {
-                          areaOptions.yaxis.labels.formatter = function(val) {
-                              return '' + val + '';
-                          }
-                      }
-                      if ("yes" === "yes") {
-                          areaOptions.tooltip['enabledOnSeries'] = [0, 1, 2];
-                      }
-                      if ("" === "yes") {
-                          areaOptions['annotations'] = {
-                              yaxis: [{
-                                  y: 0,
-                                  strokeDashArray: parseInt("0"),
-                                  borderColor: '#000000'
-                              }]
-                          };
-                      }
-                      
-                      areaOptions['markers'] = {
-                          size: '5_,_0_,_0'.split('_,_'),
-                          strokeColors: '#14ECFE85_,_#fff_,_#fff'.split('_,_'),
-                          strokeWidth: '3_,_0_,_0'.split('_,_'),
-                          shape: 'circle_,_circle_,_circle'.split('_,_'),
-                          showNullDataPoints: true,
-                          hover: {
-                              size: 3,
-                              sizeOffset: 1
-                          }
-                      }
-                      
-                      if (typeof initNowGraphina !== "undefined") {
-                          initNowGraphina(
-                              myElement, {
-                                  ele: myElement,
-                                  options: areaOptions,
-                                  series: [{
-                                      name: '',
-                                      data: []
-                                  }],
-                                  animation: true
-                              },
-                              '2aed04d'
-                          );
-                      }
-                      if (window.ajaxIntervalGraphina_2aed04d !== undefined) {
-                          clearInterval(window.ajaxIntervalGraphina_2aed04d)
-                      }
-                    </script>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-b9f3522 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="b9f3522" data-element_type="widget" data-widget_type="divider.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-2f20a73 elementor-align-right elementor-widget elementor-widget-button" data-id="2f20a73" data-element_type="widget" data-widget_type="button.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-button-wrapper">
-                      <a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-shrink" role="button">
-                      <span class="elementor-button-content-wrapper">
-                      <span class="elementor-button-text">Lihat Detail</span>
-                      </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
     <section class="elementor-section elementor-top-section elementor-element elementor-element-4c4a09e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4c4a09e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div class="elementor-background-overlay"></div>
       <div class="elementor-container elementor-column-gap-default">
@@ -2891,7 +1904,7 @@
                       <li class="elementor-icon-list-item">
                         <span class="elementor-icon-list-icon">
                         <i aria-hidden="true" class="far fa-chart-bar"></i>						</span>
-                        <span class="elementor-icon-list-text text-white">Design Progress</span>
+                        <span class="elementor-icon-list-text text-white">Gantt Chart</span>
                       </li>
                     </ul>
                   </div>
@@ -2922,51 +1935,55 @@
                       isInit['88f4ec7'] = false;
                       
                       var timelineOptions = {
-                          series: [{
-                              "name": "Estimated 3",
+                          series: [
+                          {
+                              "name": "Commisioning",
                               "data": [{
-                                  "x": "Planning",
-                                  "y": [1634358300000, 1634540280000]
-                              }, {
-                                  "x": "Analysis",
-                                  "y": [1633854780000, 1633942440000]
-                              }, {
-                                  "x": "Testing",
-                                  "y": [1634727180000, 1634816340000]
-                              }, {
-                                  "x": "Release",
-                                  "y": [1634455860000, 1634803500000]
-                              }]
-                          }, {
-                              "name": "Estimated 2",
-                              "data": [{
-                                  "x": "Planning",
+                                  "x": "Project 1",
                                   "y": [1634092740000, 1634443380000]
                               }, {
-                                  "x": "Analysis",
+                                  "x": "Project 2",
                                   "y": [1634117520000, 1634382180000]
                               }, {
-                                  "x": "Testing",
+                                  "x": "Project 3",
                                   "y": [1634377860000, 1634810340000]
-                              }, {
-                                  "x": "Release",
-                                  "y": [1634042220000, 1634363880000]
-                              }]
-                          }, {
-                              "name": "Estimated 1",
+                              }, ]
+                          },{
+                              "name": "Construction",
                               "data": [{
-                                  "x": "Planning",
+                                  "x": "Project 1",
+                                  "y": [1634358300000, 1634540280000]
+                              }, {
+                                  "x": "Project 2",
+                                  "y": [1633854780000, 1633942440000]
+                              }, {
+                                  "x": "Project 3",
+                                  "y": [1634727180000, 1634816340000]
+                              }, ]
+                          }, {
+                              "name": "Fabrication",
+                              "data": [{
+                                  "x": "Project 1",
+                                  "y": [1634092740000, 1634443380000]
+                              }, {
+                                  "x": "Project 2",
+                                  "y": [1634117520000, 1634382180000]
+                              }, {
+                                  "x": "Project 3",
+                                  "y": [1634377860000, 1634810340000]
+                              }, ]
+                          }, {
+                              "name": "Design",
+                              "data": [{
+                                  "x": "Project 1",
                                   "y": [1634371260000, 1634606580000]
                               }, {
-                                  "x": "Analysis",
+                                  "x": "Project 2",
                                   "y": [1634525460000, 1634525760000]
                               }, {
-                                  "x": "Testing",
+                                  "x": "Project 3",
                                   "y": [1634213940000, 1634359800000]
-                              }, {
-                                  "x": "Release",
-                                  "y": [1633921920000, 1634205420000]
-                              }]
+                              }, ]
                           }],
                           chart: {
                               height: parseInt('400'),

@@ -1,0 +1,129 @@
+
+.modal-dialog.modal-xl
+  .modal-content
+    .modal-header.py-5
+      h5.modal-title
+        | Details Pie Chart
+      button.close[
+        type="button"
+        data-dismiss="modal"
+        aria-label="Close"
+        data-action="click->modal#handleClickClose"
+      ]
+        i.ki.ki-close[aria-hidden="true"]
+    .modal-body
+      .mb-5
+        .row.align-items-center
+          .col-lg-12.col-xl-12
+            .row.align-items-center
+              .col-md-4.my-2.my-md-0.ml-auto
+                .input-icon
+                  input#kt_datatable_search_query_3.form-control[type="text" placeholder="Search..."]
+                  span
+                    i.flaticon2-search-1.text-muted
+      #kt_datatable_2.datatable.datatable-bordered.datatable-head-custom.datatable-default.datatable-primary.datatable-loaded[style=""]
+        table.datatable-table
+          thead.datatable-head
+            tr.datatable-row
+              th.datatable-cell.datatable-cell-sort[data-field="tanggal"]
+                span[style="width: 80px;"]
+                  | Tanggal
+              th.datatable-cell.datatable-cell-sort[data-field="name"]
+                span[style="width: 165px;"]
+                  | Nomer
+              th.datatable-cell.datatable-cell-sort[data-field="hire_date"]
+                span[style="width: 150px;"]
+                  | Pekerjaan
+              th.datatable-cell.datatable-cell-sort[data-field="gender"]
+                span[style="width: 114px;"]
+                  | Gambar
+              th.datatable-cell.datatable-cell-sort[data-field="status"]
+                span[style="width: 114px;"]
+                  | Tepsco
+              th.datatable-cell.datatable-cell-sort[data-field="type" data-autohide-disabled="false"]
+                span[style="width: 114px;"]
+                  | Connusa
+          tbody.datatable-body[style="max-height: 359px;"]
+            tr.datatable-row
+              td.datatable-cell[data-field="tanggal" aria-label="21/10/2021"]
+                span[style="width: 114px;"]
+                  | 21/10/2021
+              td.datatable-cell[data-field="number" aria-label="null"]
+                span[style="width: 114px;"]
+                  | 20394830001
+              td.datatable-cell[data-field="hire_date" aria-label="3/18/2018"]
+                span[style="width: 114px;"]
+                  | Design
+              td.datatable-cell[data-field="gender" aria-label="Male"]
+                span[style="width: 114px;"]
+                  | Gambar 1.jpg
+              td.datatable-cell[data-field="status" aria-label="6"]
+                span
+                  label.checkbox.checkbox-single
+                    input[type="checkbox" value="1"]
+                    |  
+                    span
+              td.datatable-cell[data-field="type" data-autohide-disabled="false" aria-label="2"]
+                span
+                  label.checkbox.checkbox-single
+                    input[type="checkbox" value="1"]
+                    |  
+                    span
+              
+        .datatable-pager.datatable-paging-loaded
+          ul.datatable-pager-nav.my-2.mb-sm-0
+            li
+              a.datatable-pager-link.datatable-pager-link-first.datatable-pager-link-disabled[title="First" data-page="1" disabled="disabled"]
+                i.flaticon2-fast-back
+            li
+              a.datatable-pager-link.datatable-pager-link-prev.datatable-pager-link-disabled[title="Previous" data-page="1" disabled="disabled"]
+                i.flaticon2-back
+            li[style="display: none;"]
+              input.datatable-pager-input.form-control[type="text" title="Page number"]
+            li
+              a.datatable-pager-link.datatable-pager-link-number.datatable-pager-link-active[data-page="1" title="1"]
+                | 1
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="2" title="2"]
+                | 2
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="3" title="3"]
+                | 3
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="4" title="4"]
+                | 4
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="5" title="5"]
+                | 5
+            li
+              a.datatable-pager-link.datatable-pager-link-next[title="Next" data-page="2"]
+                i.flaticon2-next
+            li
+              a.datatable-pager-link.datatable-pager-link-last[title="Last" data-page="100"]
+                i.flaticon2-fast-next
+          .datatable-pager-info.my-2.mb-sm-0
+            .dropdown.bootstrap-select.datatable-pager-size[style="width: 60px;"]
+              select.selectpicker.datatable-pager-size[title="Select page size" data-width="60px" data-container="body" data-selected="10"]
+                option.bs-title-option[value=""]
+                option[value="5"]
+                  | 5
+                option[value="10"]
+                  | 10
+                option[value="20"]
+                  | 20
+                option[value="30"]
+                  | 30
+                option[value="50"]
+                  | 50
+                option[value="100"]
+                  | 100
+              button.btn.dropdown-toggle.btn-light[type="button" tabindex="-1" data-toggle="dropdown" role="combobox" aria-owns="bs-select-10" aria-haspopup="listbox" aria-expanded="false" title="Select page size"]
+                .filter-option
+                  .filter-option-inner
+                    .filter-option-inner-inner
+                      | 10
+              .dropdown-menu
+                #bs-select-10.inner.show[role="listbox" tabindex="-1"]
+                  ul.dropdown-menu.inner.show[role="presentation"]
+            span.datatable-pager-detail
+              | Showing 1 - 10 of 1000
