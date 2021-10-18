@@ -3,7 +3,7 @@
   .modal-content
     .modal-header.py-5
       h5.modal-title
-        | Details Pie Chart
+        | Details Card
       button.close[
         type="button"
         data-dismiss="modal"
@@ -11,65 +11,50 @@
         data-action="click->modal#handleClickClose"
       ]
         i.ki.ki-close[aria-hidden="true"]
-    .modal-body
-      .mb-5
-        .row.align-items-center
-          .col-lg-12.col-xl-12
-            .row.align-items-center
-              .col-md-4.my-2.my-md-0.ml-auto
-                .input-icon
-                  input#kt_datatable_search_query_3.form-control[type="text" placeholder="Search..."]
-                  span
-                    i.flaticon2-search-1.text-muted
+    .modal-body.pt-0
       #kt_datatable_2.datatable.datatable-bordered.datatable-head-custom.datatable-default.datatable-primary.datatable-loaded[style=""]
-        table.datatable-table
-          thead.datatable-head
-            tr.datatable-row
-              th.datatable-cell.datatable-cell-sort[data-field="tanggal"]
-                span[style="width: 163px;"]
-                  | Tanggal
-              th.datatable-cell.datatable-cell-sort[data-field="name"]
-                span[style="width: 200px;"]
-                  | Nomer
-              th.datatable-cell.datatable-cell-sort[data-field="hire_date"]
-                span[style="width: 137px;"]
-                  | Pekerjaan
-              th.datatable-cell.datatable-cell-sort[data-field="gender"]
-                span[style="width: 221px;"]
-                  | Gambar
-              th.datatable-cell.datatable-cell-sort[data-field="status"]
-                span[style="width: 100px;"]
-                  | Tepsco
-              th.datatable-cell.datatable-cell-sort[data-field="type" data-autohide-disabled="false"]
-                span[style="width: 70px;"]
-                  | Connusa
-          tbody.datatable-body
+        table.table
+          thead
+            tr
+              th[scope="col"]
+                | No
+              th[scope="col"]
+                | Date
+              th[scope="col"]
+                | Stackholder
+              th[scope="col"]
+                | Issue
+              th[scope="col"]
+                | Informan
+              th[scope="col"]
+                | Solution
+              th[scope="col"]
+                | Check
+              th[scope="col"]
+                | Evidence
+          tbody
             -3.times do |a|
-              tr.datatable-row
-                td.datatable-cell[data-field="tanggal" aria-label="21/10/2021"]
-                  span [style="width: 64px;"]
-                    | 21/10/2021
-                td.datatable-cell[data-field="number" aria-label="null"]
-                  span [style="width: 79px;"]
-                    | 2039483000#{a}
-                td.datatable-cell[data-field="hire_date" aria-label="3/18/2018"]
-                  span [style="width: 40px;"]
-                    | Design
-                td.datatable-cell[data-field="gender" aria-label="Male"]
-                  span [style="width: 67px;"]
-                    | Gambar #{a}.jpg
-                td.datatable-cell[data-field="status" aria-label="6"]
-                  span [style="width: 25px;"]
-                    label.checkbox.checkbox-single
-                      input[type="checkbox" checked="checked" value="1"]
-                      |  
-                      span
-                td.datatable-cell[data-field="type" data-autohide-disabled="false" aria-label="2"]
-                  span [style="width: 25px;"]
+              tr
+                th[scope="row"]
+                  | #{a}
+                td
+                  | 15/10/2021
+                td
+                  | Kepolisian
+                td
+                  | Tagihan
+                td
+                  | Randy 
+                td
+                  | Pembayaran #{a} juta
+                td
+                  span 
                     label.checkbox.checkbox-single
                       input[type="checkbox" value="1"]
                       |  
                       span
+                td
+                  | Gambar #{a}.jpg
               
         .datatable-pager.datatable-paging-loaded
           ul.datatable-pager-nav.my-2.mb-sm-0

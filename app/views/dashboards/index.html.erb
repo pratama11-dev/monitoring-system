@@ -5,10 +5,21 @@
   role="dialog"
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
-  data-focus-on="input:first"
   data-controller="modal"
 >
   <%= render partial: "modal_details_pie_chart"%>
+</div>
+
+<div
+  id="modalDetailsCard"\
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  data-controller="modal"
+>
+  <%= render partial: "modal_details_card"%>
 </div>
 
 <div class="elementor-inner">
@@ -155,8 +166,16 @@
                 <div class="card-body text-center p-2 border-0" style="background-color: #04043A;">
                   <div class="flex-column">
                     <div class="d-flex align-items-center">
-                      <div class="fa la-arrows-alt-h text-muted text-success mr-2 ml-auto"></div>
-                      <span class="text-muted">0%</span>
+                      <a 
+                        class="btn btn-sm btn-clean btn-icon mr-2 ml-auto"
+                        class="text-white font-weight-bold text-hover-primary font-size-lg"
+                        data-modal-trigger-target-selector="#modalDetailsCard"
+                        data-controller="modal-trigger"
+                        data-action="click->modal-trigger#handleClick"
+                      >	                            
+                        <div class="fa far fa-eye text-muted mr-2 ml-auto">
+                        </div>
+                      </a>
                     </div>
                     <div class="d-flex justify-content-center align-items-center px-3 pt-0">
                       <div class="mr-3">
@@ -171,7 +190,16 @@
                         </span>
                       </div>
                       <div class="flex-column">
-                        <div class="my-2"><a class="text-white font-weight-bold text-hover-primary font-size-lg">Critical Issue Pending</a></div>
+                        <div class="my-2">
+                          <a 
+                            class="text-white font-weight-bold text-hover-primary font-size-lg"
+                            data-modal-trigger-target-selector="#modalDetailsCard"
+                            data-controller="modal-trigger"
+                            data-action="click->modal-trigger#handleClick"
+                          >
+                            Critical Issue Pending
+                          </a>
+                        </div>
                         <label class="bg-light-success p-1 rounded"><span class="font-weight-bold font-size-h6 text-success">4/10</span></label>
                       </div>
                     </div>
@@ -688,7 +716,7 @@
                         data-controller="modal-trigger"
                         data-action="click->modal-trigger#handleClick"
                       >
-                          Launch demo modal
+                          Lihat Detail
                       </button>
                     </div>
                   </div>
@@ -877,11 +905,16 @@
                 <div class="elementor-element elementor-element-0746e99 elementor-align-center elementor-widget elementor-widget-button" data-id="0746e99" data-element_type="widget" data-widget_type="button.default">
                   <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
-                      <a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-shrink" role="button">
-                      <span class="elementor-button-content-wrapper">
-                      <span class="elementor-button-text">Lihat Detail</span>
-                      </span>
-                      </a>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        <%# data-toggle="modal" %>
+                        data-modal-trigger-target-selector="#modalDetailsPieChart"
+                        data-controller="modal-trigger"
+                        data-action="click->modal-trigger#handleClick"
+                      >
+                          Lihat Detail
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1069,11 +1102,16 @@
                 <div class="elementor-element elementor-element-8713320 elementor-align-center elementor-widget elementor-widget-button" data-id="8713320" data-element_type="widget" data-widget_type="button.default">
                   <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
-                      <a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-shrink" role="button">
-                      <span class="elementor-button-content-wrapper">
-                      <span class="elementor-button-text">Lihat Detail</span>
-                      </span>
-                      </a>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        <%# data-toggle="modal" %>
+                        data-modal-trigger-target-selector="#modalDetailsPieChart"
+                        data-controller="modal-trigger"
+                        data-action="click->modal-trigger#handleClick"
+                      >
+                          Lihat Detail
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1262,11 +1300,16 @@
                 <div class="elementor-element elementor-element-0b171b6 elementor-align-center elementor-widget elementor-widget-button" data-id="0b171b6" data-element_type="widget" data-widget_type="button.default">
                   <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
-                      <a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-shrink" role="button">
-                      <span class="elementor-button-content-wrapper">
-                      <span class="elementor-button-text">Lihat Detail</span>
-                      </span>
-                      </a>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        <%# data-toggle="modal" %>
+                        data-modal-trigger-target-selector="#modalDetailsPieChart"
+                        data-controller="modal-trigger"
+                        data-action="click->modal-trigger#handleClick"
+                      >
+                          Lihat Detail
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1340,12 +1383,12 @@
                       
                       var columnOptions = {
                           series: [{
-                              "name": "Realisasi",
-                              "data": [105, 143, 122, 138, 147, 111, 127, 179],
+                              "name": "Realisasi (Rp)",
+                              "data": [150, 180, 190, 200, 210, 220, 230, 240],
                               "color": "#3499FF"
                           }, {
-                              "name": "Total lender",
-                              "data": [200, 200, 200, 200, 200, 200, 200, 200],
+                              "name": "Total lender (Rp)",
+                              "data": [300, 270, 260, 250, 240, 230, 220, 210],
                               "color": "#e53efc"
                           }],
                           chart: {
@@ -1625,12 +1668,12 @@
                       
                       var columnOptions = {
                           series: [{
-                              "name": "Realisasi",
-                              "data": [190, 180, 122, 138, 147, 160, 127, 179],
+                              "name": "Realisasi (Rp)",
+                              "data": [150, 180, 190, 200, 210, 220, 230, 240],
                               "color": "#3499FF"
                           }, {
-                              "name": "Total Lender",
-                              "data": [187, 174, 158, 111, 129, 158, 111, 129],
+                              "name": "Total Lender (Rp)",
+                              "data": [300, 270, 260, 250, 240, 230, 220, 210],
                               "color": "#e53efc"
                           }],
                           chart: {
