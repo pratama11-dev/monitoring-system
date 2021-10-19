@@ -1,25 +1,33 @@
-<div
-  id="modalDetailsPieChart"\
-  class="modal fade"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
-  data-controller="modal"
->
-  <%= render partial: "modal_details_pie_chart"%>
+<div id="modalDetailsCard" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsCard" aria-hidden="true">
+  <%= render partial: "modal_details_card"%>
 </div>
 
-<div
-  id="modalDetailsCard"\
-  class="modal fade"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
-  data-controller="modal"
->
-  <%= render partial: "modal_details_card"%>
+<div id="modalDetailsRealisasi" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsCard" aria-hidden="true">
+  <%= render partial: "modal_details_realisasi"%>
+</div>
+
+<div id="modalDetailsInvoiceKontraktor" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsCard" aria-hidden="true">
+  <%= render partial: "modal_details_invoice_kontraktor"%>
+</div>
+
+<div id="modalDetailsLoanWithdraw" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsCard" aria-hidden="true">
+  <%= render partial: "modal_details_loan_withdraw"%>
+</div>
+
+<div id="modalDetailsProgressDesign" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsProgressDesign" aria-hidden="true">
+  <%= render partial: "modal_details_progress_design"%>
+</div>
+
+<div id="modalDetailsProgressFabrication" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsProgressFabrication" aria-hidden="true">
+  <%= render partial: "modal_details_progress_fabrication"%>
+</div>
+
+<div id="modalDetailsProgressConstruction" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsProgressConstruction" aria-hidden="true">
+  <%= render partial: "modal_details_progress_construction"%>
+</div>
+
+<div id="modalDetailsProgressCommissioning" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsProgressCommissioning" aria-hidden="true">
+  <%= render partial: "modal_details_progress_commissioning"%>
 </div>
 
 <div class="elementor-inner">
@@ -78,11 +86,11 @@
               <div class="card gutter-b card-stretch border-0">
                 <div class="card-body text-center p-2 border-0" style="background-color: #04043A;">
                   <div class="flex-column">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center my-1">
                       <div class="fa la-angle-double-up text-success mr-2 ml-auto"></div>
                       <span class="text-success">12.1%</span>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center px-3 pt-0">
+                    <div class="d-flex justify-content-center align-items-center px-3 pt-0 pb-6">
                       <div class="mr-3">
                         <span class="svg-icon svg-icon-4x svg-icon-warning">
                           <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -95,8 +103,17 @@
                         </span>
                       </div>
                       <div class="flex-column">
-                        <div class="my-2"><a class="text-white font-weight-bold text-hover-primary font-size-lg">Realisasi</a></div>
-                        <label class="bg-light-warning p-1 rounded"><span class="font-weight-bold font-size-h6 text-warning">Rp.200.000.000</span></label>
+                        <div class="my-2">
+                          <a 
+                            class="text-white font-weight-bolder text-hover-primary font-size-lg"
+                            data-toggle="modal" 
+                            data-target="#modalDetailsRealisasi"
+                            style="cursor: pointer;"
+                          >
+                            Realisasi
+                          </a>
+                        </div>
+                        <label class="bg-light-warning p-1 rounded"><span class="font-weight-bold font-size-h6 text-warning">33%</span></label>
                       </div>
                     </div>
                   </div>
@@ -107,11 +124,11 @@
               <div class="card gutter-b card-stretch border-0">
                 <div class="card-body text-center p-2 border-0" style="background-color: #04043A;">
                   <div class="flex-column">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center my-1">
                       <div class="fa la-angle-double-down text-danger mr-2 ml-auto"></div>
                       <span class="text-danger">0.1%</span>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center px-3 pt-0">
+                    <div class="d-flex justify-content-center align-items-center px-3 pt-0 pb-6">
                       <div class="mr-3">
                         <span class="svg-icon svg-icon-4x svg-icon-danger">
                           <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -124,8 +141,17 @@
                         </span>
                       </div>
                       <div class="flex-column">
-                        <div class="my-2"><a class="text-white font-weight-bold text-hover-primary font-size-lg">Pembayaran Pada Kontraktor</a></div>
-                        <label class="bg-light-danger p-1 rounded"><span class="font-weight-bold font-sizeh6m text-danger">Rp.20.000.000</span></label>
+                        <div class="my-2">
+                          <a 
+                            class="text-white font-weight-bolder text-hover-primary font-size-lg"
+                            data-toggle="modal" 
+                            data-target="#modalDetailsInvoiceKontraktor"
+                            style="cursor: pointer;"
+                          >
+                            Tagihan Pekerjaan Kontraktor
+                          </a>
+                        </div>
+                        <label class="bg-light-danger p-1 rounded"><span class="font-weight-bold font-size-h6 text-danger">30%</span></label>
                       </div>
                     </div>
                   </div>
@@ -136,11 +162,11 @@
               <div class="card gutter-b card-stretch border-0">
                 <div class="card-body text-center p-2 border-0" style="background-color: #04043A;">
                   <div class="flex-column">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center my-1">
                       <div class="fa la-arrows-alt-h text-muted mr-2 ml-auto"></div>
                       <span class="text-muted">0%</span>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center px-3 pt-0">
+                    <div class="d-flex justify-content-center align-items-center px-3 pt-0 pb-6">
                       <div class="mr-3">
                         <span class="svg-icon svg-icon-4x svg-icon-primary">
                           <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -153,8 +179,17 @@
                         </span>
                       </div>
                       <div class="flex-column">
-                        <div class="my-2"><a class="text-white font-weight-bold text-hover-primary font-size-lg">Penarikan Pinjaman</a></div>
-                        <label class="bg-light-primary p-1 rounded"><span class="font-weight-bold font-size-h6 text-primary">Rp.250.000.000</span></label>
+                        <div class="my-2">
+                          <a 
+                            class="text-white font-weight-bolder text-hover-primary font-size-lg"
+                            data-toggle="modal" 
+                            data-target="#modalDetailsLoanWithdraw"
+                            style="cursor: pointer;"
+                          >
+                            Penarikan Pinjaman
+                          </a>
+                        </div>
+                        <label class="bg-light-primary p-1 rounded"><span class="font-weight-bold font-size-h6 text-primary">Rp.150.000.000.000</span></label>
                       </div>
                     </div>
                   </div>
@@ -167,17 +202,15 @@
                   <div class="flex-column">
                     <div class="d-flex align-items-center">
                       <a 
-                        class="btn btn-sm btn-clean btn-icon mr-2 ml-auto"
-                        class="text-white font-weight-bold text-hover-primary font-size-lg"
-                        data-modal-trigger-target-selector="#modalDetailsCard"
-                        data-controller="modal-trigger"
-                        data-action="click->modal-trigger#handleClick"
+                        class="btn btn-sm btn-clean btn-icon mr-2 ml-auto text-white text-hover-primary"
+                        data-toggle="modal" 
+                        data-target="#modalDetailsCard"
                       >	                            
                         <div class="fa far fa-eye text-muted mr-2 ml-auto">
                         </div>
                       </a>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center px-3 pt-0">
+                    <div class="d-flex justify-content-center align-items-center px-3 pt-0 pb-4">
                       <div class="mr-3">
                         <span class="svg-icon svg-icon-4x svg-icon-success">
                           <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -192,10 +225,10 @@
                       <div class="flex-column">
                         <div class="my-2">
                           <a 
-                            class="text-white font-weight-bold text-hover-primary font-size-lg"
-                            data-modal-trigger-target-selector="#modalDetailsCard"
-                            data-controller="modal-trigger"
-                            data-action="click->modal-trigger#handleClick"
+                            class="text-white font-weight-bolder text-hover-primary font-size-lg"
+                            data-toggle="modal" 
+                            data-target="#modalDetailsCard"
+                            style="cursor: pointer;"
                           >
                             Critical Issue Pending
                           </a>
@@ -711,10 +744,8 @@
                       <button
                         type="button"
                         class="btn btn-primary"
-                        <%# data-toggle="modal" %>
-                        data-modal-trigger-target-selector="#modalDetailsPieChart"
-                        data-controller="modal-trigger"
-                        data-action="click->modal-trigger#handleClick"
+                        data-toggle="modal" 
+                        data-target="#modalDetailsProgressDesign"
                       >
                           Lihat Detail
                       </button>
@@ -908,10 +939,8 @@
                       <button
                         type="button"
                         class="btn btn-primary"
-                        <%# data-toggle="modal" %>
-                        data-modal-trigger-target-selector="#modalDetailsPieChart"
-                        data-controller="modal-trigger"
-                        data-action="click->modal-trigger#handleClick"
+                        data-toggle="modal" 
+                        data-target="#modalDetailsProgressFabrication"
                       >
                           Lihat Detail
                       </button>
@@ -1105,10 +1134,8 @@
                       <button
                         type="button"
                         class="btn btn-primary"
-                        <%# data-toggle="modal" %>
-                        data-modal-trigger-target-selector="#modalDetailsPieChart"
-                        data-controller="modal-trigger"
-                        data-action="click->modal-trigger#handleClick"
+                        data-toggle="modal" 
+                        data-target="#modalDetailsProgressConstruction"
                       >
                           Lihat Detail
                       </button>
@@ -1303,10 +1330,8 @@
                       <button
                         type="button"
                         class="btn btn-primary"
-                        <%# data-toggle="modal" %>
-                        data-modal-trigger-target-selector="#modalDetailsPieChart"
-                        data-controller="modal-trigger"
-                        data-action="click->modal-trigger#handleClick"
+                        data-toggle="modal" 
+                        data-target="#modalDetailsProgressCommissioning"
                       >
                           Lihat Detail
                       </button>
@@ -1350,8 +1375,26 @@
                     <ul class="elementor-icon-list-items">
                       <li class="elementor-icon-list-item">
                         <span class="elementor-icon-list-icon">
-                        <i aria-hidden="true" class="far fa-chart-bar"></i></span>
-                        <span class="elementor-icon-list-text text-white">Report</span>
+                          <i aria-hidden="true" class="far fa-chart-bar"></i>
+                        </span>
+                        <span class="elementor-icon-list-text text-white">Monthly Progress</span>
+                        <div class="card-toolbar ml-auto">
+                          <div class="d-flex align-items-center" data-controller="picker--daterange">
+                            <a 
+                              class="btn btn-md font-weight-bold mr-2"
+                              data-placement="bottom"
+                              data-toggle="tooltip"
+                              title= "Select dashboard daterange" 
+                              data-start-date="#{params[:start_date]}"
+                              data-end-date="#{params[:end_date]}"
+                            >
+                              <span class="span text-white text-hover-info">
+                                <div class="ki ki-calendar icon-lg">
+                                </div>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -1383,11 +1426,11 @@
                       
                       var columnOptions = {
                           series: [{
-                              "name": "Realisasi (Rp)",
+                              "name": "Realisasi",
                               "data": [150, 180, 190, 200, 210, 220, 230, 240],
                               "color": "#3499FF"
                           }, {
-                              "name": "Total lender (Rp)",
+                              "name": "Rencana",
                               "data": [300, 270, 260, 250, 240, 230, 220, 210],
                               "color": "#e53efc"
                           }],
@@ -1636,7 +1679,7 @@
                       <li class="elementor-icon-list-item">
                         <span class="elementor-icon-list-icon">
                         <i aria-hidden="true" class="far fa-chart-bar"></i></span>
-                        <span class="elementor-icon-list-text text-white">Report</span>
+                        <span class="elementor-icon-list-text text-white">Total Dana Pinjaman</span>
                       </li>
                     </ul>
                   </div>
@@ -1668,11 +1711,11 @@
                       
                       var columnOptions = {
                           series: [{
-                              "name": "Realisasi (Rp)",
+                              "name": "Realisasi",
                               "data": [150, 180, 190, 200, 210, 220, 230, 240],
                               "color": "#3499FF"
                           }, {
-                              "name": "Total Lender (Rp)",
+                              "name": "Rencana",
                               "data": [300, 270, 260, 250, 240, 230, 220, 210],
                               "color": "#e53efc"
                           }],
@@ -1982,51 +2025,67 @@
                           {
                               "name": "Commisioning",
                               "data": [{
-                                  "x": "Project 1",
+                                  "x": "Progress Design",
                                   "y": [1634092740000, 1634443380000]
                               }, {
-                                  "x": "Project 2",
+                                  "x": "Progress Fabrication",
                                   "y": [1634117520000, 1634382180000]
                               }, {
-                                  "x": "Project 3",
+                                  "x": "Progress Construction",
                                   "y": [1634377860000, 1634810340000]
-                              }, ]
+                              }, {
+                                  "x": "Progress Commisioning",
+                                  "y": [1634377861000, 1634810341000]
+                              }, 
+                            ]
                           },{
                               "name": "Construction",
                               "data": [{
-                                  "x": "Project 1",
+                                  "x": "Progress Design",
                                   "y": [1634358300000, 1634540280000]
                               }, {
-                                  "x": "Project 2",
+                                  "x": "Progress Fabrication",
                                   "y": [1633854780000, 1633942440000]
                               }, {
-                                  "x": "Project 3",
+                                  "x": "Progress Construction",
                                   "y": [1634727180000, 1634816340000]
-                              }, ]
+                              }, {
+                                  "x": "Progress Commisioning",
+                                  "y": [1634377861000, 1634810341000]
+                              },
+                            ]
                           }, {
                               "name": "Fabrication",
                               "data": [{
-                                  "x": "Project 1",
+                                  "x": "Progress Design",
                                   "y": [1634092740000, 1634443380000]
                               }, {
-                                  "x": "Project 2",
+                                  "x": "Progress Fabrication",
                                   "y": [1634117520000, 1634382180000]
                               }, {
-                                  "x": "Project 3",
+                                  "x": "Progress Construction",
                                   "y": [1634377860000, 1634810340000]
-                              }, ]
+                              }, {
+                                  "x": "Progress Commisioning",
+                                  "y": [1634377861000, 1634810341000]
+                              },
+                            ]
                           }, {
                               "name": "Design",
                               "data": [{
-                                  "x": "Project 1",
+                                  "x": "Progress Design",
                                   "y": [1634371260000, 1634606580000]
                               }, {
-                                  "x": "Project 2",
+                                  "x": "Progress Fabrication",
                                   "y": [1634525460000, 1634525760000]
                               }, {
-                                  "x": "Project 3",
+                                  "x": "Progress Construction",
                                   "y": [1634213940000, 1634359800000]
-                              }, ]
+                              }, {
+                                  "x": "Progress Commisioning",
+                                  "y": [1634377861000, 1634810341000]
+                              },
+                            ]
                           }],
                           chart: {
                               height: parseInt('400'),
@@ -2087,7 +2146,7 @@
                           },
                           legend: {
                               showForSingleSeries: true,
-                              show: 'yes',
+                              show: false,
                               position: 'bottom',
                               horizontalAlign: 'center',
                               fontSize: '12px',

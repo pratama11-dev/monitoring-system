@@ -4,12 +4,7 @@
     .modal-header.py-5
       h5.modal-title
         | Details Card
-      button.close[
-        type="button"
-        data-dismiss="modal"
-        aria-label="Close"
-        data-action="click->modal#handleClickClose"
-      ]
+      button.close[type="button" data-dismiss="modal" aria-label="Close"]
         i.ki.ki-close[aria-hidden="true"]
     .modal-body.pt-0
       #kt_datatable_2.datatable.datatable-bordered.datatable-head-custom.datatable-default.datatable-primary.datatable-loaded[style=""]
@@ -25,7 +20,7 @@
               th[scope="col"]
                 | Issue
               th[scope="col"]
-                | Informan
+                | PIC
               th[scope="col"]
                 | Solution
               th[scope="col"]
@@ -54,7 +49,8 @@
                       |  
                       span
                 td
-                  | Gambar #{a}.jpg
+                  a [href="https://drive.google.com/file/d/1uPzqDpTcPvQbDPZ02kOV6bCnBeKgbHYt/view?usp=sharing" target="_blank"]
+                    | Gambar #{a}.jpg
               
         .datatable-pager.datatable-paging-loaded
           ul.datatable-pager-nav.my-2.mb-sm-0
@@ -88,28 +84,5 @@
               a.datatable-pager-link.datatable-pager-link-last[title="Last" data-page="100"]
                 i.flaticon2-fast-next
           .datatable-pager-info.my-2.mb-sm-0
-            .dropdown.bootstrap-select.datatable-pager-size[style="width: 60px;"]
-              select.selectpicker.datatable-pager-size[title="Select page size" data-width="60px" data-container="body" data-selected="10"]
-                option.bs-title-option[value=""]
-                option[value="5"]
-                  | 5
-                option[value="10"]
-                  | 10
-                option[value="20"]
-                  | 20
-                option[value="30"]
-                  | 30
-                option[value="50"]
-                  | 50
-                option[value="100"]
-                  | 100
-              button.btn.dropdown-toggle.btn-light[type="button" tabindex="-1" data-toggle="dropdown" role="combobox" aria-owns="bs-select-10" aria-haspopup="listbox" aria-expanded="false" title="Select page size"]
-                .filter-option
-                  .filter-option-inner
-                    .filter-option-inner-inner
-                      | 10
-              .dropdown-menu
-                #bs-select-10.inner.show[role="listbox" tabindex="-1"]
-                  ul.dropdown-menu.inner.show[role="presentation"]
             span.datatable-pager-detail
               | Showing 1 - 10 of 1000

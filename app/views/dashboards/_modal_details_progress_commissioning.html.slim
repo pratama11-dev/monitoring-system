@@ -1,0 +1,130 @@
+
+.modal-dialog.modal-xl
+  .modal-content
+    .modal-header.py-5
+      h5.modal-title
+        | Details Commissioning Progress
+      button.close[type="button" data-dismiss="modal" aria-label="Close"]
+        i.ki.ki-close[aria-hidden="true"]
+    .modal-body
+      / .mb-5
+        .row.align-items-center
+          .col-lg-12.col-xl-12
+            .row.align-items-center
+              .col-md-4.my-2.my-md-0.ml-auto
+                .input-icon
+                  input#kt_datatable_search_query_3.form-control[type="text" placeholder="Search..."]
+                  span
+                    i.flaticon2-search-1.text-muted
+      #kt_datatable_2.datatable.datatable-bordered.datatable-head-custom.datatable-default.datatable-primary.datatable-loaded[style=""]
+        table.table
+          thead
+            tr
+              th [data-field="SPK"]
+                span
+                  | No.SPK
+              th [data-field="tanggal"]
+                span
+                  | Tanggal
+              th [data-field="Pekerjaan"]
+                span
+                  | Nama Pekerjaan
+              th [data-field="Pengerjaan"]
+                span
+                  | Periode Pengerjaan
+              th [data-field="Pembayaran"]
+                span
+                  | Pembayaran
+              th [data-field="hire_date"]
+                span
+                  | Nilai Pekerjaan
+              th [data-field="gender"]
+                span
+                  | Progress
+              th [data-field="status"]
+                span
+                  | Bukti pekerjaan
+              th [data-field="type" data-autohide-disabled="false"]
+                span
+                  | PIC
+          tbody
+            -3.times do |a|
+              tr
+                td [data-field="tanggal" aria-label="D-000#{a}"]
+                  span 
+                    | C-000#{a}
+                td [data-field="tanggal" aria-label="21/10/2021"]
+                  span 
+                    | 21/10/2021
+                td [data-field="tanggal" aria-label="Design - Proses Pembangkit"]
+                  span 
+                    | Commissioning - Proses Pembangkit
+                td [data-field="tanggal" aria-label="35 Hari"]
+                  span 
+                    | 34#{a} Hari
+                td [data-field="number" aria-label="null"]
+                  span 
+                    | 60%
+                td [data-field="hire_date" aria-label="3/18/2018"]
+                  span 
+                    | Rp 3.#{a}00.000.000.00
+                td [data-field="gender" aria-label="Male"]
+                  span 
+                    | 6#{a}%
+                td[data-field="Actions" aria-label="null"]
+                  span[style="overflow: visible; position: relative; width: 125px;"]
+                  a.btn.btn-sm.btn-clean.btn-icon.mr-2[href="https://drive.google.com/file/d/1uPzqDpTcPvQbDPZ02kOV6bCnBeKgbHYt/view?usp=sharing" target="_blank"]
+                    span.svg-icon.svg-icon-md
+                      svg[xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewbox="0 0 24 24" version="1.1"]
+                        g[stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"]
+                          polygon[points="0 0 24 0 24 24 0 24"]
+                          rect[fill="#000000" opacity="0.3" x="2" y="4" width="20" height="16" rx="2"]
+                          polygon[fill="#000000" opacity="0.3" points="4 20 10.5 11 17 20"]
+                          polygon[fill="#000000" points="11 20 15.5 14 20 20"]
+                          circle[fill="#000000" opacity="0.3" cx="18.5" cy="8.5" r="1.5"]
+                  a.btn.btn-sm.btn-clean.btn-icon[href="https://drive.google.com/file/d/1uPzqDpTcPvQbDPZ02kOV6bCnBeKgbHYt/view?usp=sharing" target="_blank"]
+                    span.svg-icon.svg-icon-md
+                      svg[xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewbox="0 0 24 24" version="1.1"]
+                        g[stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"]
+                          polygon[points="0 0 24 0 24 24 0 24"]
+                          path[d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"]
+                          rect[fill="#000000" x="6" y="11" width="9" height="2" rx="1"]
+                          rect[fill="#000000" x="6" y="15" width="5" height="2" rx="1"]
+                td [data-field="type" data-autohide-disabled="false" aria-label="2"]
+                  span 
+                    | Commissioning Departement / Jaenal
+              
+        .datatable-pager.datatable-paging-loaded
+          ul.datatable-pager-nav.my-2.mb-sm-0
+            li
+              a.datatable-pager-link.datatable-pager-link-first.datatable-pager-link-disabled[title="First" data-page="1" disabled="disabled"]
+                i.flaticon2-fast-back
+            li
+              a.datatable-pager-link.datatable-pager-link-prev.datatable-pager-link-disabled[title="Previous" data-page="1" disabled="disabled"]
+                i.flaticon2-back
+            li[style="display: none;"]
+              input.datatable-pager-input.form-control[type="text" title="Page number"]
+            li
+              a.datatable-pager-link.datatable-pager-link-number.datatable-pager-link-active[data-page="1" title="1"]
+                | 1
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="2" title="2"]
+                | 2
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="3" title="3"]
+                | 3
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="4" title="4"]
+                | 4
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="5" title="5"]
+                | 5
+            li
+              a.datatable-pager-link.datatable-pager-link-next[title="Next" data-page="2"]
+                i.flaticon2-next
+            li
+              a.datatable-pager-link.datatable-pager-link-last[title="Last" data-page="100"]
+                i.flaticon2-fast-next
+          .datatable-pager-info.my-2.mb-sm-0
+            span.datatable-pager-detail
+              | Showing 1 - 10 of 1000
