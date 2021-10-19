@@ -1,12 +1,12 @@
 
 .modal-dialog.modal-xl
-  .modal-content
+  .modal-content.bg-dark
     .modal-header.py-5
-      h5.modal-title
+      h5.modal-title.text-white
         | Details Fabrication Progress
       button.close[type="button" data-dismiss="modal" aria-label="Close"]
         i.ki.ki-close[aria-hidden="true"]
-    .modal-body
+    .modal-body.pt-0
       / .mb-5
         .row.align-items-center
           .col-lg-12.col-xl-12
@@ -17,7 +17,7 @@
                   span
                     i.flaticon2-search-1.text-muted
       #kt_datatable_2.datatable.datatable-bordered.datatable-head-custom.datatable-default.datatable-primary.datatable-loaded[style=""]
-        table.table
+        table.table.table-hover.table-dark
           thead
             tr
               th [data-field="SPK"]
@@ -126,5 +126,5 @@
               a.datatable-pager-link.datatable-pager-link-last[title="Last" data-page="100"]
                 i.flaticon2-fast-next
           .datatable-pager-info.my-2.mb-sm-0
-            span.datatable-pager-detail
+            span.datatable-pager-detail.text-white
               | Showing 1 - 10 of 1000

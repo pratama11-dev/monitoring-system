@@ -1,14 +1,14 @@
 
 .modal-dialog.modal-xl
-  .modal-content
-    .modal-header.py-5
-      h5.modal-title
+  .modal-content.bg-dark
+    .modal-header.border-info.py-5
+      h5.modal-title.text-white
         | Details Card
       button.close[type="button" data-dismiss="modal" aria-label="Close"]
         i.ki.ki-close[aria-hidden="true"]
-    .modal-body.pt-0
-      #kt_datatable_2.datatable.datatable-bordered.datatable-head-custom.datatable-default.datatable-primary.datatable-loaded[style=""]
-        table.table
+    .modal-body.bg-dark.pt-0
+      #kt_datatable_2.datatable.datatable-head-custom.datatable-default.datatable-primary.datatable-loaded[style=""]
+        table.table.table-hover.table-dark
           thead
             tr
               th[scope="col"]
@@ -84,5 +84,5 @@
               a.datatable-pager-link.datatable-pager-link-last[title="Last" data-page="100"]
                 i.flaticon2-fast-next
           .datatable-pager-info.my-2.mb-sm-0
-            span.datatable-pager-detail
+            span.datatable-pager-detail.text-white
               | Showing 1 - 10 of 1000
