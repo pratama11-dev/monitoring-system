@@ -1,39 +1,9 @@
-<div id="modalDetailsCard" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsCard" aria-hidden="true">
-  <%= render partial: "modal_details_card"%>
-</div>
-
-<div id="modalDetailsRealisasi" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsCard" aria-hidden="true">
-  <%= render partial: "modal_details_realisasi"%>
-</div>
-
-<div id="modalDetailsInvoiceKontraktor" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsCard" aria-hidden="true">
-  <%= render partial: "modal_details_invoice_kontraktor"%>
-</div>
-
-<div id="modalDetailsLoanWithdraw" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsCard" aria-hidden="true">
-  <%= render partial: "modal_details_loan_withdraw"%>
-</div>
-
-<div id="modalDetailsProgressDesign" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsProgressDesign" aria-hidden="true">
-  <%= render partial: "modal_details_progress_design"%>
-</div>
-
-<div id="modalDetailsProgressFabrication" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsProgressFabrication" aria-hidden="true">
-  <%= render partial: "modal_details_progress_fabrication"%>
-</div>
-
-<div id="modalDetailsProgressConstruction" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsProgressConstruction" aria-hidden="true">
-  <%= render partial: "modal_details_progress_construction"%>
-</div>
-
-<div id="modalDetailsProgressCommissioning" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetailsProgressCommissioning" aria-hidden="true">
-  <%= render partial: "modal_details_progress_commissioning"%>
-</div>
+<%= render "dashboards/modals/all_modals" %>%
 
 <div class="elementor-inner">
   <div class="elementor-section-wrap">
     <section class="elementor-section elementor-top-section elementor-element elementor-element-5cbb0919 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle elementor-invisible"
-      data-id="5cbb0919" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_effects_offset&quot;:100,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0}" style="background-color: white !important;">
+      data-id="5cbb0919" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_effects_offset&quot;:100,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0}" style="background-image: linear-gradient(to left, #04043A, #FFF7E0) !important;">
       <div class="elementor-container elementor-column-gap-default">
         <div class="elementor-row">
           <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f4611e2" data-id="f4611e2" data-element_type="column">
@@ -250,7 +220,7 @@
                           data-target="#modalDetailsCard"
                           style="cursor: pointer;"
                         >
-                          Pending Matters
+                          Risiko, Isu Kritis dan Pending Matters
                         </a>
                       </div>
                       <label class=""><span class="font-weight-boldest font-size-h2 text-success">4/10</span></label>
@@ -2166,251 +2136,11 @@
                       <div class="">
                       </div>
                       <div class="">
-                        <div class="chart-texture timeline-chart-88f4ec7"></div>
+                        <div class="chart-texture timeline-chart-88f4ec7" id="gantt_chart" data-controller="dashboards--gantt-chart"></div>
                       </div>
                     </div>
                     <script>
-                      var myElement = document.querySelector(".timeline-chart-88f4ec7");
                       
-                      if (typeof isInit === 'undefined') {
-                          var isInit = {};
-                      }
-                      isInit['88f4ec7'] = false;
-                      
-                      var timelineOptions = {
-                          series: [
-                          {
-                              "name": "Proses Pembangkit",
-                              "data": [{
-                                  "x": "Progress Design",
-                                  "y": [new Date('2021-01-17').getTime(), new Date('2021-02-21').getTime()],
-                              }, {
-                                  "x": "Progress Design",
-                                  "y": [new Date('2021-02-28').getTime(), new Date('2021-05-19').getTime()]
-                              }, {
-                                  "x": "Progress Design",
-                                  "y": [new Date('2021-05-25').getTime(), new Date('2021-06-30').getTime()]
-                              }, {
-                                  "x": "Progress Design",
-                                  "y": [new Date('2021-07-01').getTime(), new Date('2021-08-05').getTime()]
-                              }, 
-                            ]
-                          },{
-                              "name": "Sipil Pembangkit",
-                              "data": [{
-                                  "x": "Progress Fabrication",
-                                  "y": [new Date('2021-01-17').getTime(), new Date('2021-02-17').getTime()]
-                              }, {
-                                  "x": "Progress Fabrication",
-                                  "y": [new Date('2021-02-19').getTime(), new Date('2021-03-20').getTime()]
-                              }, {
-                                  "x": "Progress Fabrication",
-                                  "y": [new Date('2021-03-22').getTime(), new Date('2021-04-12').getTime()]
-                              }, {
-                                  "x": "Progress Fabrication",
-                                  "y": [new Date('2021-04-15').getTime(), new Date('2021-05-01').getTime()]
-                              },
-                            ]
-                          }, {
-                              "name": "Peralatan Mekanik",
-                              "data": [{
-                                  "x": "Progress Construction",
-                                  "y": [new Date('2021-01-17').getTime(), new Date('2021-03-20').getTime()]
-                              }, {
-                                  "x": "Progress Construction",
-                                  "y": [new Date('2021-03-25').getTime(), new Date('2021-05-22').getTime()]
-                              }, {
-                                  "x": "Progress Construction",
-                                  "y": [new Date('2021-05-30').getTime(), new Date('2021-08-23').getTime()]
-                              }, {
-                                  "x": "Progress Construction",
-                                  "y": [new Date('2021-09-17').getTime(), new Date('2021-10-25').getTime()]
-                              },
-                            ]
-                          }, {
-                              "name": "Struktur Dasar",
-                              "data": [{
-                                  "x": "Progress Commisioning",
-                                  "y": [new Date('2021-01-17').getTime(), new Date('2021-02-01').getTime()]
-                              }, {
-                                  "x": "Progress Commisioning",
-                                  "y": [new Date('2021-02-05').getTime(), new Date('2021-03-02').getTime()]
-                              }, {
-                                  "x": "Progress Commisioning",
-                                  "y": [new Date('2021-03-17').getTime(), new Date('2021-05-03').getTime()]
-                              }, {
-                                  "x": "Progress Commisioning",
-                                  "y": [new Date('2021-05-17').getTime(), new Date('2021-07-16').getTime()]
-                              },
-                            ]
-                          }],
-                          chart: {
-                              height: parseInt('400'),
-                              type: 'rangeBar',
-                              toolbar: {
-                                  show: 'yes',
-                                  export: {
-                                      csv: {
-                                          filename: "88f4ec7"
-                                      },
-                                      svg: {
-                                          filename: "88f4ec7"
-                                      },
-                                      png: {
-                                          filename: "88f4ec7"
-                                      }
-                                  }
-                              },
-                              animations: {
-                                  enabled: '1',
-                                  speed: '3000',
-                                  delay: '150'
-                              }
-                          },
-                          noData: {
-                              text: 'No Data Available',
-                              align: 'center',
-                              verticalAlign: 'middle',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Rubik',
-                                  color: '#54749F'
-                              }
-                          },
-                          plotOptions: {
-                              bar: {
-                                  horizontal: true
-                              }
-                          },
-                          colors: '#3499FF_,_#e53efc_,_#f9a243'.split('_,_'),
-                          fill: {
-                              type: 'classic',
-                              opacity: parseFloat('0.9'),
-                              colors: '#3499FF_,_#e53efc_,_#f9a243'.split('_,_'),
-                              gradient: {
-                                  gradientToColors: '_,__,_'.split('_,_'),
-                                  type: '',
-                                  inverseColors: '',
-                                  opacityFrom: parseFloat(''),
-                                  opacityTo: parseFloat('')
-                              },
-                              pattern: {
-                                  style: '_,__,_'.split('_,_'),
-                                  width: 6,
-                                  height: 6,
-                                  strokeWidth: 2
-                              }
-                          },
-                          legend: {
-                              showForSingleSeries: true,
-                              show: false,
-                              position: 'bottom',
-                              horizontalAlign: 'center',
-                              fontSize: '12px',
-                              fontFamily: 'Rubik',
-                              fontWeight: '',
-                              labels: {
-                                  colors: '#54749F'
-                              }
-                          },
-                          grid: {
-                              yaxis: {
-                                  lines: {
-                                      show: ''
-                                  }
-                              }
-                          },
-                          xaxis: {
-                              type: 'datetime',
-                              position: 'bottom',
-                              tickAmount: parseInt("30"),
-                              tickPlacement: "on",
-                              labels: {
-                                  show: 'yes',
-                                  rotateAlways: '',
-                                  rotate: '',
-                                  offsetX: parseInt('0'),
-                                  offsetY: parseInt('0'),
-                                  trim: true,
-                                  style: {
-                                      colors: '#FFFFFF',
-                                      fontSize: '12px',
-                                      fontFamily: 'Rubik',
-                                      fontWeight: ''
-                                  },
-                                  
-                              }
-                          },
-                          yaxis: {
-                              opposite: '',
-                              tickAmount: parseInt("30"),
-                              decimalsInFloat: parseInt("6"),
-                              labels: {
-                                  show: 'yes',
-                                  rotate: '0',
-                                  offsetX: parseInt('0'),
-                                  offsetY: parseInt('0'),
-                                  style: {
-                                      colors: '#FFFFFF',
-                                      fontSize: '12px',
-                                      fontFamily: 'Rubik',
-                                      fontWeight: ''
-                                  }
-                              }
-                          },
-                          dataLabels: {
-                              enabled: 'yes',
-                              style: {
-                                  colors: ['#000C52']
-                              },
-                              background: {
-                                  enabled: '',
-                                  foreColor: [''],
-                                  borderWidth: parseInt(''),
-                                  borderColor: ''
-                              },
-                              formatter: function(value, {
-                                  seriesIndex,
-                                  dataPointIndex,
-                                  w
-                              }) {
-                                  return w.config.series[seriesIndex].name + ":  " + timeDifference(value[0], value[1]);
-                              }
-                          },
-                          stroke: {
-                              show: true,
-                              width: parseInt('0')
-                          },
-                          tooltip: {
-                              enabled: 'yes',
-                              theme: 'dark',
-                              style: {
-                                  fontSize: '12px',
-                                  fontFamily: 'Rubik'
-                              },
-                              x: {
-                                  format: "yyyy/MMM/d"
-                              }
-                          }
-                      };
-                      
-                      if (typeof initNowGraphina !== "undefined") {
-                          initNowGraphina(
-                              myElement, {
-                                  ele: document.querySelector(".timeline-chart-88f4ec7"),
-                                  options: timelineOptions,
-                                  series: [{
-                                      name: '',
-                                      data: []
-                                  }],
-                                  animation: true
-                              },
-                              '88f4ec7'
-                          );
-                      }
-                      if (window.ajaxIntervalGraphina_88f4ec7 !== undefined) {
-                          clearInterval(window.ajaxIntervalGraphina_88f4ec7)
-                      }
                     </script>
                   </div>
                 </div>
@@ -2466,7 +2196,7 @@
                           <div class="elementor-widget-wrap">
                             <div class="elementor-element elementor-element-37811a19 elementor-widget elementor-widget-heading" data-id="37811a19" data-element_type="widget" data-widget_type="heading.default">
                               <div class="elementor-widget-container">
-                                <h6 class="elementor-heading-title elementor-size-default font-weight-bolder text-primary">Head Office</h6>
+                                <h6 class="elementor-heading-title elementor-size-default font-weight-bolder" style="color: #04043A;">Head Office</h6>
                               </div>
                             </div>
                             <div class="elementor-element elementor-element-36fb6056 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="36fb6056" data-element_type="widget" data-widget_type="divider.default">

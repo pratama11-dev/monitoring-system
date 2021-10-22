@@ -5,3 +5,13 @@
 .modal{
   z-index: 99999 !important;
 }
+
+.apexcharts-legend-text{
+  color: white !important;
+}
+
+@media (max-width: 420px) {
+  .elementor-element-b14a97b{
+    padding-top: 100px !important;
+  }
+}
