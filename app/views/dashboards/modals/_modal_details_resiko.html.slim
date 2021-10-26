@@ -1,0 +1,100 @@
+
+.modal-dialog.modal-xl
+  .modal-content.bg-dark
+    .modal-header.py-5
+      h5.modal-title.text-white
+        | Details Project Risk
+      button.close[type="button" data-dismiss="modal" aria-label="Close"]
+        i.ki.ki-close[aria-hidden="true"]
+    .modal-body.pt-0
+      #kt_datatable_2.datatable.datatable-bordered.datatable-head-custom.datatable-default.datatable-primary.datatable-loaded.table-responsive[style=""]
+        table.table.table-hover.table-dark
+          thead
+            tr
+              th [data-field="SPK"]
+                span
+                  | No
+              th [data-field="permit"]
+                span
+                  | Permit
+              th [data-field="Pekerjaan"]
+                span
+                  | No. Izin
+              th [data-field="date"]
+                span
+                  | Tanggal Izin
+              th [data-field="Pembayaran"]
+                span
+                  | Expired Dated
+              th [data-field="hire_date"]
+                span
+                  | Action
+              th [data-field="gender"]
+                span
+                  | PIC
+              th [data-field="status"]
+                span
+                  | Jabatan
+
+          tbody
+            -3.times do |a|
+              tr
+                td [data-field="tanggal" aria-label="#{a}"]
+                  span 
+                    | #{a + 1}
+                td [data-field="permit" aria-label="permit"]
+                  span 
+                    | Izin pembuangan limbah B3 padat
+                td [data-field="tanggal" aria-label="No - izin"]
+                  span 
+                    | No. SK/3324/LIM/456
+                td [data-field="tanggal" aria-label="03/12/2021"]
+                  span 
+                    | 03/12/2021
+                td [data-field="tanggal" aria-label="06/12/2021"]
+                  span 
+                    | 06/12/2021
+                td [data-field="hire_date" aria-label="3/18/2018"]
+                  span 
+                    | Contract Renewal
+                td [data-field="PIC" aria-label="PIC"]
+                  span 
+                    | Farid S.T
+                td[data-field="Actions" aria-label="null"]
+                  span
+                    | Manager Legal
+              
+        .datatable-pager.datatable-paging-loaded
+          ul.datatable-pager-nav.my-2.mb-sm-0
+            li
+              a.datatable-pager-link.datatable-pager-link-first.datatable-pager-link-disabled[title="First" data-page="1" disabled="disabled"]
+                i.flaticon2-fast-back
+            li
+              a.datatable-pager-link.datatable-pager-link-prev.datatable-pager-link-disabled[title="Previous" data-page="1" disabled="disabled"]
+                i.flaticon2-back
+            li[style="display: none;"]
+              input.datatable-pager-input.form-control[type="text" title="Page number"]
+            li
+              a.datatable-pager-link.datatable-pager-link-number.datatable-pager-link-active[data-page="1" title="1"]
+                | 1
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="2" title="2"]
+                | 2
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="3" title="3"]
+                | 3
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="4" title="4"]
+                | 4
+            li
+              a.datatable-pager-link.datatable-pager-link-number[data-page="5" title="5"]
+                | 5
+            li
+              a.datatable-pager-link.datatable-pager-link-next[title="Next" data-page="2"]
+                i.flaticon2-next
+            li
+              a.datatable-pager-link.datatable-pager-link-last[title="Last" data-page="100"]
+                i.flaticon2-fast-next
+          .datatable-pager-info.my-2.mb-sm-0
+            span.datatable-pager-detail.text-white
+              | Showing 1 - 10 of 1000
