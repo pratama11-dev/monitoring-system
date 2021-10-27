@@ -14,9 +14,9 @@
               th[scope="col"]
                 | No
               th[scope="col"]
-                | Date
+                | Tanggal
               th[scope="col"]
-                | Stackholder
+                | Pihak Berkepentingan
               th[scope="col"]
                 | Issue
               th[scope="col"]
@@ -27,34 +27,102 @@
                 | Solution
               th[scope="col"]
                 | Check
-              th[scope="col"]
+              th.text-center[scope="col"]
                 | Evidence
           tbody
-            -3.times do |a|
-              tr
-                th[scope="row"]
-                  | #{a}
-                td
-                  | 15/10/2021
-                td
-                  | Kepolisian
-                td
-                  | Tagihan
-                td
-                  | Randy 
-                td
-                  | Low
-                td
-                  | Pembayaran #{a} juta
-                td
-                  span 
-                    label.checkbox.checkbox-single
-                      input[type="checkbox" value="1"]
-                      |  
-                      span
-                td
-                  a [href="https://drive.google.com/file/d/1uPzqDpTcPvQbDPZ02kOV6bCnBeKgbHYt/view?usp=sharing" target="_blank"]
-                    | Gambar #{a}.jpg
+            tr
+              th[scope="row"]
+                | 1
+              td
+                | 15/10/2021
+              td
+                | Kontraktor
+              td
+                | Keterlambatan Instalasi
+              td
+                | Randy 
+              td
+                | Medium
+              td
+                | Penambahan jumlah personil
+              td.text-center
+                span
+                  label.checkbox.checkbox-single
+                    input[type="checkbox" checked="cheked" value="1"]
+                    |  
+                    span
+              td.text-center.p-0
+                a.btn.btn-sm.btn-clean.btn-icon.mr-2[href="https://drive.google.com/file/d/1y1zaorh6Oc4vri7uM8izEzwxL4d1Qabh/view?usp=sharing" target="_blank"]
+                  span.svg-icon.svg-icon-md
+                    svg[xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewbox="0 0 24 24" version="1.1"]
+                      g[stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"]
+                        polygon[points="0 0 24 0 24 24 0 24"]
+                        rect[fill="#000000" opacity="0.3" x="2" y="4" width="20" height="16" rx="2"]
+                        polygon[fill="#000000" opacity="0.3" points="4 20 10.5 11 17 20"]
+                        polygon[fill="#000000" points="11 20 15.5 14 20 20"]
+                        circle[fill="#000000" opacity="0.3" cx="18.5" cy="8.5" r="1.5"]
+            tr
+              th[scope="row"]
+                | 2
+              td
+                | 15/12/2021
+              td
+                | Legal
+              td
+                | Masa Berlaku Izin
+              td
+                | Farid S.T 
+              td
+                | High
+              td
+                | Pembaruan Izin
+              td.text-center
+                span
+                  label.checkbox.checkbox-single
+                    input[type="checkbox" value="1"]
+                    |  
+                    span
+              td.text-center.p-0
+                a.btn.btn-sm.btn-clean.btn-icon.mr-2[href="https://drive.google.com/file/d/1vbd4yVN9qtvN-H7mCx0_A5jKVnVNXmqw/view?usp=sharing" target="_blank"]
+                  span.svg-icon.svg-icon-md
+                    svg[xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewbox="0 0 24 24" version="1.1"]
+                      g[stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"]
+                        polygon[points="0 0 24 0 24 24 0 24"]
+                        rect[fill="#000000" opacity="0.3" x="2" y="4" width="20" height="16" rx="2"]
+                        polygon[fill="#000000" opacity="0.3" points="4 20 10.5 11 17 20"]
+                        polygon[fill="#000000" points="11 20 15.5 14 20 20"]
+                        circle[fill="#000000" opacity="0.3" cx="18.5" cy="8.5" r="1.5"]
+            tr
+              th[scope="row"]
+                | 3
+              td
+                | 01/02/2022
+              td
+                | Keamanan
+              td
+                | Tagihan
+              td
+                | Randi
+              td
+                | Low
+              td
+                | Pembayaran Uang Keamanan Sebesar 10 juta
+              td.text-center
+                span
+                  label.checkbox.checkbox-single
+                    input[type="checkbox" checked="checked" value="1"]
+                    |  
+                    span
+              td.text-center.p-0
+                a.btn.btn-sm.btn-clean.btn-icon.mr-2[href="https://drive.google.com/file/d/1SnQh7wetu853Sg7Q8Vq6l_j06IK-Sula/view?usp=sharing" target="_blank"]
+                  span.svg-icon.svg-icon-md
+                    svg[xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewbox="0 0 24 24" version="1.1"]
+                      g[stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"]
+                        polygon[points="0 0 24 0 24 24 0 24"]
+                        rect[fill="#000000" opacity="0.3" x="2" y="4" width="20" height="16" rx="2"]
+                        polygon[fill="#000000" opacity="0.3" points="4 20 10.5 11 17 20"]
+                        polygon[fill="#000000" points="11 20 15.5 14 20 20"]
+                        circle[fill="#000000" opacity="0.3" cx="18.5" cy="8.5" r="1.5"]
               
         .datatable-pager.datatable-paging-loaded
           ul.datatable-pager-nav.my-2.mb-sm-0
